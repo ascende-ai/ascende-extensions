@@ -117,6 +117,7 @@ function ModelOption({
   const ideMessenger = useContext(IdeMessengerContext);
   const dispatch = useDispatch();
   const [hovered, setHovered] = useState(false);
+  const themeType = useThemeType();
 
   function onClickDelete(e) {
     e.stopPropagation();
