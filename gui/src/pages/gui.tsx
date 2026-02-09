@@ -58,7 +58,8 @@ import {
 } from "../util";
 import { FREE_TRIAL_LIMIT_REQUESTS } from "../util/freeTrial";
 import OnboardingTutorial from "./onboarding/OnboardingTutorial";
-import { getLogoPath } from "./welcome/setup/ImportExtensions";
+import { getBrandLogoPath } from "./welcome/setup/ImportExtensions";
+import { useThemeType } from "@/hooks/useVscTheme";
 import { Badge } from "../components/ui/badge";
 import { cn } from "@/lib/utils";
 import "@/continue-styles.css";
@@ -157,6 +158,7 @@ function GUI() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const ideMessenger = useContext(IdeMessengerContext);
+  const themeType = useThemeType();
 
   const memories = useSelector(
     (store: RootState) => store.state.memories,
@@ -547,7 +549,7 @@ function GUI() {
 
               <div className="w-full h-[700px] text-center flex flex-col items-center justify-center relative gap-5">
                 <div className="flex-1 flex absolute bottom-[260px] items-center justify-center">
-                  <img src={getLogoPath("pearai-chat-splash.svg")} alt="..." />
+                  <img src={getBrandLogoPath(themeType)} alt="Ascende.ai Logo" />
                 </div>
 
                 <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">

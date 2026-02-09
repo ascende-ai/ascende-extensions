@@ -15,12 +15,15 @@ import _ from "lodash";
 import { useWebviewListener } from "../../hooks/useWebviewListener";
 import { Button } from "@/components/ui/button";
 import "@/continue-styles.css";
+import { getBrandLogoPath } from "../welcome/setup/ImportExtensions";
+import { useThemeType } from "../../hooks/useVscTheme";
 
 function Onboarding() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const ideMessenger = useContext(IdeMessengerContext);
   const { completeOnboarding } = useOnboarding();
+  const themeType = useThemeType();
 
   useEffect(() => {
     if (window.isPearOverlay) {
@@ -33,9 +36,10 @@ function Onboarding() {
     <div className="max-w-96 mx-auto flex flex-col items-center justify-between pt-8">
       <div className="flex flex-col items-center justify-center">
       <img
-          src={`${window.vscMediaUrl}/logos/pearai-green.svg`}
+          src={getBrandLogoPath(themeType)}
           height="24px"
           style={{ marginRight: "5px" }}
+          alt="Ascende.ai Logo"
         />
       <h1 className="text-center">Welcome to PearAI!</h1>
       <h3 className="mx-3 text-center flex">Begin your journey by logging in</h3>

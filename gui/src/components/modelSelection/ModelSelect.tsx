@@ -24,6 +24,8 @@ import {
   isMetaEquivalentKeyPressed,
 } from "../../util";
 import ConfirmationDialog from "../dialogs/ConfirmationDialog";
+import { getBrandLogoPath } from "../../pages/welcome/setup/ImportExtensions";
+import { useThemeType } from "../../hooks/useVscTheme";
 
 const StyledListboxButton = styled(Listbox.Button)`
   border: solid 1px ${lightGray}30;
@@ -149,7 +151,7 @@ function ModelOption({
           {option.provider === 'pearai_server' ? (
             <div className="flex items-center gap-1 mr-2">
               <img
-                src={`${window.vscMediaUrl}/logos/pearai-color.png`}
+                src={getBrandLogoPath(themeType)}
                 className="w-4 h-4 object-contain"
               />
               {!option.title.toLowerCase().includes('pearai model') && <img
@@ -216,6 +218,7 @@ function ModelSelect() {
   const allModels = useSelector((state: RootState) => state.state.config.models);
   const navigate = useNavigate();
   const ideMessenger = useContext(IdeMessengerContext);
+  const themeType = useThemeType();
 
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -311,7 +314,7 @@ function ModelSelect() {
               {defaultModel ? (defaultModel?.provider === 'pearai_server' ? (
                 <div className="flex flex-initial items-center">
                   <img
-                    src={`${window.vscMediaUrl}/logos/pearai-color.png`}
+                    src={getBrandLogoPath(themeType)}
                     className="w-[15px] h-[15px] object-contain"
                   />
                   {!defaultModel.title.toLowerCase().includes('pearai') && <img

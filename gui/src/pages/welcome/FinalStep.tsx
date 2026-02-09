@@ -68,7 +68,8 @@ export default function FinalStep({
         You're all set!
       </div>
       <div className="flex flex-col items-center gap-4 ">
-        <div className="creator-button-container w-[250px] md:w-[280px] mb-4">
+        {/* Hidden: PearAI Creator button temporarily disabled */}
+        <div className="creator-button-container w-[250px] md:w-[280px] mb-4 hidden">
           <div className="rainbow-border-glow rainbow-border-glow-visible scale-105"></div>
           <Button
             className="text-base md:text-lg py-5 px-2 md:py-6 h-12 flex text-white bg-black w-full relative z-10"
