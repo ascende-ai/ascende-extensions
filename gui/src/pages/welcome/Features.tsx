@@ -182,9 +182,8 @@ export default function Features({
 
         <div className="h-[80%] rounded-xl justify-start items-start inline-flex overflow-hidden">
           <motion.div
-            className={`w-full flex-col justify-center items-center gap-7 flex ${
-              currentFeature === 0 ? "flex" : "hidden"
-            }`}
+            className={`w-full flex-col justify-center items-center gap-7 flex ${currentFeature === 0 ? "flex" : "hidden"
+              }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: currentFeature === 0 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -194,9 +193,8 @@ export default function Features({
               <video
                 ref={videoRefs[0]}
                 src={features[0].video}
-                className={`rounded-lg w-full h-full object-cover ${
-                  currentFeature === 0 ? "flex" : "hidden"
-                }`}
+                className={`rounded-lg w-full h-full object-cover ${currentFeature === 0 ? "flex" : "hidden"
+                  }`}
                 muted
                 autoPlay
                 playsInline
@@ -205,9 +203,8 @@ export default function Features({
             </div>
           </motion.div>
           <motion.div
-            className={`w-full flex-col justify-center items-center gap-7 flex ${
-              currentFeature === 1 ? "flex" : "hidden"
-            }`}
+            className={`w-full flex-col justify-center items-center gap-7 flex ${currentFeature === 1 ? "flex" : "hidden"
+              }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: currentFeature === 1 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -217,9 +214,8 @@ export default function Features({
               <video
                 ref={videoRefs[1]}
                 src={features[1].video}
-                className={`rounded-lg w-full h-full object-cover inset-0 ${
-                  currentFeature === 1 ? "flex" : "hidden"
-                }`}
+                className={`rounded-lg w-full h-full object-cover inset-0 ${currentFeature === 1 ? "flex" : "hidden"
+                  }`}
                 muted
                 autoPlay
                 playsInline
@@ -228,9 +224,8 @@ export default function Features({
             </div>
           </motion.div>
           <motion.div
-            className={`w-full flex-col justify-center items-center gap-7 flex ${
-              currentFeature === 2 ? "flex" : "hidden"
-            }`}
+            className={`w-full flex-col justify-center items-center gap-7 flex ${currentFeature === 2 ? "flex" : "hidden"
+              }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: currentFeature === 2 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -240,9 +235,8 @@ export default function Features({
               <video
                 ref={videoRefs[2]}
                 src={features[2].video}
-                className={`rounded-lg w-full h-full object-cover inset-0 ${
-                  currentFeature === 2 ? "flex" : "hidden"
-                }`}
+                className={`rounded-lg w-full h-full object-cover inset-0 ${currentFeature === 2 ? "flex" : "hidden"
+                  }`}
                 muted
                 autoPlay
                 playsInline
@@ -251,9 +245,8 @@ export default function Features({
             </div>
           </motion.div>
           <motion.div
-            className={`w-full flex-col justify-center items-center gap-7 flex ${
-              currentFeature === 3 ? "flex" : "hidden"
-            }`}
+            className={`w-full flex-col justify-center items-center gap-7 flex ${currentFeature === 3 ? "flex" : "hidden"
+              }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: currentFeature === 3 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -263,9 +256,8 @@ export default function Features({
               <video
                 ref={videoRefs[3]}
                 src={features[3].video}
-                className={`rounded-lg w-full h-full object-cover inset-0 ${
-                  currentFeature === 3 ? "flex" : "hidden"
-                }`}
+                className={`rounded-lg w-full h-full object-cover inset-0 ${currentFeature === 3 ? "flex" : "hidden"
+                  }`}
                 muted
                 autoPlay
                 playsInline

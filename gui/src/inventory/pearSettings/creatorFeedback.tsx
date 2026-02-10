@@ -33,11 +33,10 @@ const FeedbackOption = ({
 }: FeedbackOptionProps) => {
   return (
     <div
-      className={`flex flex-col items-center justify-center p-4 rounded-lg border shadow-sm cursor-pointer transition-all border-solid ${
-        selectedType === type
+      className={`flex flex-col items-center justify-center p-4 rounded-lg border shadow-sm cursor-pointer transition-all border-solid ${selectedType === type
           ? "bg-blue-500/20 border-2 border-blue-500 text-blue-500"
           : "bg-muted border-muted-foreground/20 hover:bg-muted/80 hover:border-muted-foreground/30"
-      }`}
+        }`}
       onClick={() => onClick(type)}
     >
       <div className="text-2xl mb-2">{icon}</div>

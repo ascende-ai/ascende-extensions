@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const esbuild = require("esbuild");
 
 const flags = process.argv.slice(2);
@@ -21,12 +23,39 @@ const esbuildConfig = {
   define: { "import.meta.url": "importMetaUrl" },
 };
 
+function copyXhrSyncWorker() {
+  const src = path.join(
+    __dirname,
+    "..",
+    "node_modules",
+    "jsdom",
+    "lib",
+    "jsdom",
+    "living",
+    "xhr",
+    "xhr-sync-worker.js"
+  );
+  const dest = path.join(__dirname, "..", "out", "xhr-sync-worker.js");
+  if (fs.existsSync(src)) {
+    fs.copyFileSync(src, dest);
+    console.log("[info] Copied xhr-sync-worker.js to out/");
+  } else {
+    console.warn(
+      "[warn] xhr-sync-worker.js not found at",
+      src,
+      "- run npm install"
+    );
+  }
+}
+
 (async () => {
   // Bundles the extension into one file
   if (flags.includes("--watch")) {
     const ctx = await esbuild.context(esbuildConfig);
     await ctx.watch();
+    copyXhrSyncWorker();
   } else {
     await esbuild.build(esbuildConfig);
+    copyXhrSyncWorker();
   }
 })();

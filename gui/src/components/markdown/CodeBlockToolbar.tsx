@@ -4,7 +4,7 @@ import {
   PlayIcon,
   BoltIcon,
   XMarkIcon,
-	CodeBracketIcon,
+  CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 import { useContext, useState } from "react";
 import styled from "styled-components";
@@ -87,9 +87,9 @@ function CodeBlockToolBar(props: CodeBlockToolBarProps) {
 
   return (
     <div className="flex justify-between w-[calc(100%-8px)] items-center p-1 absolute">
-			<div className="ml-1">
-				<CodeBracketIcon className="w-4 h-4 stroke-2"></CodeBracketIcon>
-			</div>
+      <div className="ml-1">
+        <CodeBracketIcon className="w-4 h-4 stroke-2"></CodeBracketIcon>
+      </div>
       <SecondDiv bottom={props.bottom || false}>
         {isPerplexityMode() && <HeaderButtonWithText
           text="Add to ascende.ai chat context"

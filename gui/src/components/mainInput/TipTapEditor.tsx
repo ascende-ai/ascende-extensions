@@ -407,7 +407,7 @@ const TipTapEditor = memo(function TipTapEditor({
           const imageIcon = document.createElement('div');
           imageIcon.className = 'image-icon';
           const deleteButton = document.createElement('button');
-          
+
           deleteButton.className = 'image-delete-button';
           deleteButton.textContent = 'Image';
           deleteButton.onclick = (e) => {

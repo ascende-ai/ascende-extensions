@@ -249,61 +249,61 @@ function ConfigureProvider() {
                 <>
                   {(modelInfo?.collectInputFor?.filter((d) => d.required)
                     .length || 0) > 0 && (
-                    <>
-                      <h3 className="mb-2">Enter required parameters</h3>
+                      <>
+                        <h3 className="mb-2">Enter required parameters</h3>
 
-                      {modelInfo?.collectInputFor
-                        .filter((d) => d.isWatsonxAuthenticatedByApiKey)
-                        .map((d, idx) => (
-                          <div key={idx} className="mb-2">
-                            <label htmlFor={d.key}>{d.label}</label>
-                            <Input
-                              type={d.inputType}
-                              id={d.key}
-                              className="border-2 border-gray-200 rounded-md p-2 m-2"
-                              placeholder={d.placeholder}
-                              defaultValue={d.defaultValue}
-                              min={d.min}
-                              max={d.max}
-                              step={d.step}
-                              {...formMethods.register(d.key, {
-                                required: false,
-                              })}
-                            />
-                          </div>
-                        ))}
-                    </>
-                  )}
+                        {modelInfo?.collectInputFor
+                          .filter((d) => d.isWatsonxAuthenticatedByApiKey)
+                          .map((d, idx) => (
+                            <div key={idx} className="mb-2">
+                              <label htmlFor={d.key}>{d.label}</label>
+                              <Input
+                                type={d.inputType}
+                                id={d.key}
+                                className="border-2 border-gray-200 rounded-md p-2 m-2"
+                                placeholder={d.placeholder}
+                                defaultValue={d.defaultValue}
+                                min={d.min}
+                                max={d.max}
+                                step={d.step}
+                                {...formMethods.register(d.key, {
+                                  required: false,
+                                })}
+                              />
+                            </div>
+                          ))}
+                      </>
+                    )}
                 </>
               ) : (
                 <>
                   {(modelInfo?.collectInputFor?.filter((d) => d.required)
                     .length || 0) > 0 && (
-                    <>
-                      <h3 className="mb-2">Enter required parameters</h3>
+                      <>
+                        <h3 className="mb-2">Enter required parameters</h3>
 
-                      {modelInfo?.collectInputFor
-                        .filter((d) => d.isWatsonxAuthenticatedByCredentials)
-                        .map((d, idx) => (
-                          <div key={idx} className="mb-2">
-                            <label htmlFor={d.key}>{d.label}</label>
-                            <Input
-                              type={d.inputType}
-                              id={d.key}
-                              className="border-2 border-gray-200 rounded-md p-2 m-2"
-                              placeholder={d.placeholder}
-                              defaultValue={d.defaultValue}
-                              min={d.min}
-                              max={d.max}
-                              step={d.step}
-                              {...formMethods.register(d.key, {
-                                required: true,
-                              })}
-                            />
-                          </div>
-                        ))}
-                    </>
-                  )}
+                        {modelInfo?.collectInputFor
+                          .filter((d) => d.isWatsonxAuthenticatedByCredentials)
+                          .map((d, idx) => (
+                            <div key={idx} className="mb-2">
+                              <label htmlFor={d.key}>{d.label}</label>
+                              <Input
+                                type={d.inputType}
+                                id={d.key}
+                                className="border-2 border-gray-200 rounded-md p-2 m-2"
+                                placeholder={d.placeholder}
+                                defaultValue={d.defaultValue}
+                                min={d.min}
+                                max={d.max}
+                                step={d.step}
+                                {...formMethods.register(d.key, {
+                                  required: true,
+                                })}
+                              />
+                            </div>
+                          ))}
+                      </>
+                    )}
                 </>
               )}
             </>
@@ -311,80 +311,80 @@ function ConfigureProvider() {
             <>
               {(modelInfo?.collectInputFor?.filter((d) => d.required).length ||
                 0) > 0 && (
-                <>
-                  <h3 className="mb-2">Enter required parameters</h3>
+                  <>
+                    <h3 className="mb-2">Enter required parameters</h3>
 
-                  {modelInfo?.collectInputFor
-                    ?.filter((d) => d.required)
-                    .map((d, idx) => (
-                      <div key={idx} className="mb-2">
-                        <label htmlFor={d.key}>{d.label}</label>
-                        <Input
-                          type={d.inputType}
-                          id={d.key}
-                          className="border-2 border-gray-200 rounded-md p-2 m-2"
-                          placeholder={d.placeholder}
-                          defaultValue={d.defaultValue}
-                          min={d.min}
-                          max={d.max}
-                          step={d.step}
-                          {...formMethods.register(d.key, {
-                            required: true,
-                          })}
-                        />
-                      </div>
-                    ))}
-                </>
-              )}
+                    {modelInfo?.collectInputFor
+                      ?.filter((d) => d.required)
+                      .map((d, idx) => (
+                        <div key={idx} className="mb-2">
+                          <label htmlFor={d.key}>{d.label}</label>
+                          <Input
+                            type={d.inputType}
+                            id={d.key}
+                            className="border-2 border-gray-200 rounded-md p-2 m-2"
+                            placeholder={d.placeholder}
+                            defaultValue={d.defaultValue}
+                            min={d.min}
+                            max={d.max}
+                            step={d.step}
+                            {...formMethods.register(d.key, {
+                              required: true,
+                            })}
+                          />
+                        </div>
+                      ))}
+                  </>
+                )}
             </>
           )}
 
           {(modelInfo?.collectInputFor?.filter((d) => !d.required).length ||
             0) > 0 && (
-            <details>
-              <summary className="mb-2 cursor-pointer">
-                <b>Advanced (optional)</b>
-              </summary>
-              {modelInfo?.collectInputFor?.map((d, idx) => {
-                // Check the attribute is only for Watson X
-                if (d.isWatsonxAttribute) return null;
-                if (d.required) return null;
+              <details>
+                <summary className="mb-2 cursor-pointer">
+                  <b>Advanced (optional)</b>
+                </summary>
+                {modelInfo?.collectInputFor?.map((d, idx) => {
+                  // Check the attribute is only for Watson X
+                  if (d.isWatsonxAttribute) return null;
+                  if (d.required) return null;
 
-                let defaultValue = d.defaultValue;
+                  let defaultValue = d.defaultValue;
 
-                if (
-                  providerName === "openrouter" &&
-                  d.key === "contextLength"
-                ) {
-                  const selectedPackage = providers[
-                    "openrouter"
-                  ]?.packages.find(
-                    (pkg) => pkg.params.model === watch("model"),
+                  if (
+                    providerName === "openrouter" &&
+                    d.key === "contextLength"
+                  ) {
+                    const selectedPackage = providers[
+                      "openrouter"
+                    ]?.packages.find(
+                      (pkg) => pkg.params.model === watch("model"),
+                    );
+                    defaultValue = selectedPackage?.params.contextLength;
+                  }
+
+                  return (
+                    <div key={idx}>
+                      <label htmlFor={d.key}>{d.label}</label>
+                      <Input
+                        type={d.inputType}
+                        id={d.key}
+                        className="border-2 border-gray-200 rounded-md p-2 m-2"
+                        placeholder={d.placeholder}
+                        defaultValue={defaultValue}
+                        min={d.min}
+                        max={d.max}
+                        step={d.step}
+                        {...formMethods.register(d.key, {
+                          required: false,
+                        })}
+                      />
+                    </div>
                   );
-                  defaultValue = selectedPackage?.params.contextLength;
-                }
-
-                return (
-                  <div key={idx}>
-                    <label htmlFor={d.key}>{d.label}</label>
-                    <Input
-                      type={d.inputType}
-                      id={d.key}
-                      className="border-2 border-gray-200 rounded-md p-2 m-2"
-                      placeholder={d.placeholder}
-                      defaultValue={defaultValue}
-                      min={d.min}
-                      max={d.max}
-                      step={d.step}
-                      {...formMethods.register(d.key, {
-                        required: false,
-                      })}
-                    />
-                  </div>
-                );
-              })}
-            </details>
-          )}
+                })}
+              </details>
+            )}
           {providerName === "openrouter" && (
             <div className="mb-2">
               <label htmlFor="model">Select a Model</label>
@@ -418,46 +418,46 @@ function ConfigureProvider() {
               </CustomModelButton>
             </>
           )}
-        {providerName === "pearai_server" ? (
+          {providerName === "pearai_server" ? (
             <>
 
-                <CustomModelButton
-                  className="m-5"
-                  disabled={false}
-                  onClick={() =>
-                    ideMessenger.post(
-                      "openUrl",
-                      "https://trypear.ai/signin?callback=pearai://pearai.pearai/auth", // Change to http://localhost:3000 and run pear-landing-page repo to test locally
-                    )
-                  }
-                >
-                  <h3 className="text-center my-2">Sign Up / Log In</h3>
-                  <img
-                    src={`${window.vscMediaUrl}/logos/${modelInfo?.icon}`}
-                    height="24px"
-                    style={{ marginRight: "5px" }}
-                  />
-                </CustomModelButton>
-                <p style={{ color: lightGray }} className="mx-3">
-                  After login, the website should redirect you back here.
-                </p>
-                <small
-                  style={{
-                    color: lightGray,
-                    fontSize: '0.85em',
-                    display: 'block'
-                  }}
-                  className="mx-3"
-                >
-                  Note: Having trouble logging in? Open ascende.ai from the dashboard on the {' '}
-                  <a href="https://trypear.ai/dashboard" target="_blank" rel="noopener noreferrer">
-                    website
-                  </a>.
-                  </small>
+              <CustomModelButton
+                className="m-5"
+                disabled={false}
+                onClick={() =>
+                  ideMessenger.post(
+                    "openUrl",
+                    "https://trypear.ai/signin?callback=pearai://pearai.pearai/auth", // Change to http://localhost:3000 and run pear-landing-page repo to test locally
+                  )
+                }
+              >
+                <h3 className="text-center my-2">Sign Up / Log In</h3>
+                <img
+                  src={`${window.vscMediaUrl}/logos/${modelInfo?.icon}`}
+                  height="24px"
+                  style={{ marginRight: "5px" }}
+                />
+              </CustomModelButton>
+              <p style={{ color: lightGray }} className="mx-3">
+                After login, the website should redirect you back here.
+              </p>
+              <small
+                style={{
+                  color: lightGray,
+                  fontSize: '0.85em',
+                  display: 'block'
+                }}
+                className="mx-3"
+              >
+                Note: Having trouble logging in? Open ascende.ai from the dashboard on the {' '}
+                <a href="https://trypear.ai/dashboard" target="_blank" rel="noopener noreferrer">
+                  website
+                </a>.
+              </small>
             </>
-            ) : (
-              providerName !== "openrouter" && (
-                <>
+          ) : (
+            providerName !== "openrouter" && (
+              <>
                 <h3 className="mb-2">Select a model preset</h3>
                 <GridDiv>
                   {modelInfo?.packages.map((pkg, idx) => {

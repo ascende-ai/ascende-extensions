@@ -29,8 +29,8 @@ function formatMemoriesAsContext(memories: { content: string }[]): ContextItemWi
     name: "ascende.ai Memories",
     description: "User memories and context",
     content: "<Beginning of relevant user context separated by comma, refer these only if required>\n" +
-            memories.map(m => m.content).join(", ") + "\n" +
-            "<End of relevant user context>"
+      memories.map(m => m.content).join(", ") + "\n" +
+      "<End of relevant user context>"
   };
 }
 

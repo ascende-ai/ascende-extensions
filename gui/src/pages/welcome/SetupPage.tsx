@@ -438,23 +438,23 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
                   type="checkbox"
                   className="w-4 h-4 shadow outline-none"
                   style={{
-                      background: visitedSteps.includes(index + 1) ? "white" : "transparent",
-                      borderRadius: "50%",
-                      border: "1.5px solid gray",
-                      appearance: "none",
-                      width: "20px",
-                      height: "20px",
-                      cursor: "pointer",
-                      marginTop: "6px",
-                      marginLeft: "4px"
+                    background: visitedSteps.includes(index + 1) ? "white" : "transparent",
+                    borderRadius: "50%",
+                    border: "1.5px solid gray",
+                    appearance: "none",
+                    width: "20px",
+                    height: "20px",
+                    cursor: "pointer",
+                    marginTop: "6px",
+                    marginLeft: "4px"
                   }}
                   onChange={(e) => {
-                      // Handle checkbox change if needed
+                    // Handle checkbox change if needed
                   }}
                   checked={visitedSteps.includes(index)}
                 />
                 {visitedSteps.includes(index + 1) && (
-                    <Check className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 stroke-[2.5px] text-black" />
+                  <Check className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 stroke-[2.5px] text-black" />
                 )}
               </div>
               <div className="w-48 flex-col justify-center items-center gap-1 inline-flex">

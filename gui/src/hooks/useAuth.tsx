@@ -49,7 +49,7 @@ export function useAuth(): {
                 }
                 hideCancelButton={true}
                 confirmText="Ok"
-                onConfirm={() => {}}
+                onConfirm={() => { }}
               />,
             ),
           );

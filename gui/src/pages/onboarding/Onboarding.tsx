@@ -35,66 +35,66 @@ function Onboarding() {
   return (
     <div className="max-w-96 mx-auto flex flex-col items-center justify-between pt-8">
       <div className="flex flex-col items-center justify-center">
-      <img
+        <img
           src={getBrandLogoPath(themeType)}
           height="24px"
           style={{ marginRight: "5px" }}
           alt="Ascende.ai Logo"
         />
-      <h1 className="text-center">Welcome to ascende.ai!</h1>
-      <h3 className="mx-3 text-center flex">Begin your journey by logging in</h3>
-      <Button 
-        variant="animated"
-        size="lg"
-        className="m-5 flex flex-col justify-center items-center bg-button text-button-foreground"
-        onClick={() => {
-          ideMessenger.post("pearaiLogin", undefined);
-        }}
-      >
-        <h3 className="font-medium">Log in</h3>
-
-      </Button>
-
-      <p className="mx-3">
-        After login, the website should redirect you back here.
-      </p>
-      <small
-        style={{
-          color: lightGray,
-          fontSize: "0.85em",
-          display: "block",
-        }}
-        className="mx-3"
-      >
-        Note: Having trouble logging in? Open ascende.ai from the dashboard on the{" "}
-        <a
-          href="https://trypear.ai/dashboard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          website
-        </a>
-        .
-      </small>
-      <div className="absolute bottom-4 right-4">
-        <StyledButton
-          onClick={(e) => {
-            dispatch(setShowDialog(true));
-            dispatch(
-              setDialogMessage(
-                <ConfirmationDialog
-                  text="Are you sure you want to skip logging in? Unless you are an existing user or already have a config.json, we don't recommend this."
-                  onConfirm={() => {
-                    completeOnboarding();
-                  }}
-                />,
-              ),
-            );
+        <h1 className="text-center">Welcome to ascende.ai!</h1>
+        <h3 className="mx-3 text-center flex">Begin your journey by logging in</h3>
+        <Button
+          variant="animated"
+          size="lg"
+          className="m-5 flex flex-col justify-center items-center bg-button text-button-foreground"
+          onClick={() => {
+            ideMessenger.post("pearaiLogin", undefined);
           }}
         >
-          Skip
-        </StyledButton>
-      </div>
+          <h3 className="font-medium">Log in</h3>
+
+        </Button>
+
+        <p className="mx-3">
+          After login, the website should redirect you back here.
+        </p>
+        <small
+          style={{
+            color: lightGray,
+            fontSize: "0.85em",
+            display: "block",
+          }}
+          className="mx-3"
+        >
+          Note: Having trouble logging in? Open ascende.ai from the dashboard on the{" "}
+          <a
+            href="https://trypear.ai/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            website
+          </a>
+          .
+        </small>
+        <div className="absolute bottom-4 right-4">
+          <StyledButton
+            onClick={(e) => {
+              dispatch(setShowDialog(true));
+              dispatch(
+                setDialogMessage(
+                  <ConfirmationDialog
+                    text="Are you sure you want to skip logging in? Unless you are an existing user or already have a config.json, we don't recommend this."
+                    onConfirm={() => {
+                      completeOnboarding();
+                    }}
+                  />,
+                ),
+              );
+            }}
+          >
+            Skip
+          </StyledButton>
+        </div>
       </div>
       <div></div>
     </div>

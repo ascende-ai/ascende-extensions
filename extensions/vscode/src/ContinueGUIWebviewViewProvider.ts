@@ -12,8 +12,7 @@ import { PEARAI_CHAT_VIEW_ID, PEARAI_OVERLAY_VIEW_ID } from "./util/pearai/peara
 // A unique identifier is needed for the messaging protocol to distinguish the webviews.
 
 export class ContinueGUIWebviewViewProvider
-  implements vscode.WebviewViewProvider
-{
+  implements vscode.WebviewViewProvider {
   public static readonly viewType = PEARAI_CHAT_VIEW_ID;
   public webviewProtocol: VsCodeWebviewProtocol;
   private _webview?: vscode.Webview;
@@ -176,8 +175,8 @@ export class ContinueGUIWebviewViewProvider
         });
       }
     });
-    
-    this.webviewProtocol.addWebview(panel?.title === PEARAI_OVERLAY_VIEW_ID? panel.title : panel.viewType, panel.webview);
+
+    this.webviewProtocol.addWebview(panel?.title === PEARAI_OVERLAY_VIEW_ID ? panel.title : panel.viewType, panel.webview);
 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -210,17 +209,16 @@ export class ContinueGUIWebviewViewProvider
 
         console.debug('Logging initialized');
         </script>`}
-        ${
-          inDevelopmentMode
-            ? `<script type="module">
+        ${inDevelopmentMode
+        ? `<script type="module">
           import RefreshRuntime from "http://localhost:5173/@react-refresh"
           RefreshRuntime.injectIntoGlobalHook(window)
           window.$RefreshReg$ = () => {}
           window.$RefreshSig$ = () => (type) => type
           window.__vite_plugin_react_preamble_installed__ = true
           </script>`
-            : ""
-        }
+        : ""
+      }
 
         <script type="module" nonce="${nonce}" src="${scriptUri}"></script>
 
@@ -233,21 +231,20 @@ export class ContinueGUIWebviewViewProvider
         <script>window.fullColorTheme = ${JSON.stringify(currentTheme)}</script>
         <script>window.colorThemeName = "dark-plus"</script>
         <script>window.workspacePaths = ${JSON.stringify(
-          vscode.workspace.workspaceFolders?.map(
-            (folder) => folder.uri.fsPath,
-          ) || [],
-        )}</script>
+        vscode.workspace.workspaceFolders?.map(
+          (folder) => folder.uri.fsPath,
+        ) || [],
+      )}</script>
         <script>window.isFirstLaunch = ${isFirstLaunch(this.extensionContext)}</script>
         <script>window.isFullScreen = ${isFullScreen}</script>
         <script>window.viewType = "${panelViewType}"</script>
         <script>window.isPearOverlay = ${isOverlay}</script>
         <script>window.initialRoute = "${initialRoute}"</script>
 
-        ${
-          edits
-            ? `<script>window.edits = ${JSON.stringify(edits)}</script>`
-            : ""
-        }
+        ${edits
+        ? `<script>window.edits = ${JSON.stringify(edits)}</script>`
+        : ""
+      }
         ${page ? `<script>window.location.pathname = "${page}"</script>` : ""}
       </body>
       ${isOverlay ? `

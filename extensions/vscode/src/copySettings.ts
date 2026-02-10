@@ -141,15 +141,15 @@ async function copyDirectoryRecursiveSync(source: string, destination: string, e
 export async function importUserSettingsFromVSCode() {
     try {
         await Promise.all([
-          new Promise((resolve) => setTimeout(resolve, 1000)), // Take at least one second
-          copyVSCodeSettingsToPearAIDir(),
+            new Promise((resolve) => setTimeout(resolve, 1000)), // Take at least one second
+            copyVSCodeSettingsToPearAIDir(),
         ]);
         return true;
-      } catch (error) {
+    } catch (error) {
         vscode.window.showErrorMessage(`Failed to copy settings: ${error}`);
         return false;
-      }
     }
+}
 
 export async function markCreatorOnboardingCompleteFileBased() {
     try {

@@ -145,14 +145,14 @@ export class QuickEdit {
 
     // Get default model from config
     let defaultModelTitle =
-        config.experimental?.modelRoles?.inlineEdit ??
-        (await this.webviewProtocol.request("getDefaultModelTitle", undefined));
+      config.experimental?.modelRoles?.inlineEdit ??
+      (await this.webviewProtocol.request("getDefaultModelTitle", undefined));
 
     // If default model is the blocked one or not set, use fallback
     if (!defaultModelTitle || !this.BLOCKED_MODELS.some(blocked => this._curModelTitle?.toLowerCase().includes(blocked.toLowerCase()))) {
       defaultModelTitle = this.DEFAULT_MODEL;
-   }
-   return defaultModelTitle;
+    }
+    return defaultModelTitle;
   }
 
   /**
@@ -175,9 +175,8 @@ export class QuickEdit {
 
     return isSelectionEmpty
       ? `Edit ${fileName}`
-      : `Edit ${fileName}:${start.line}${
-          end.line > start.line ? `-${end.line}` : ""
-        }`;
+      : `Edit ${fileName}:${start.line}${end.line > start.line ? `-${end.line}` : ""
+      }`;
   };
 
   private async _streamEditWithInputAndContext(prompt: string) {
@@ -187,64 +186,64 @@ export class QuickEdit {
     quickPick.value = prompt;
 
     try {
-        quickPick.items = [{
-            label: "$(sync~spin) Processing edit...",
-            alwaysShow: true
-        }];
-        quickPick.show();
+      quickPick.items = [{
+        label: "$(sync~spin) Processing edit...",
+        alwaysShow: true
+      }];
+      quickPick.show();
 
-        const modelTitle = await this._getCurModelTitle();
+      const modelTitle = await this._getCurModelTitle();
 
-        // Extracts all file references from the prompt string,
-        // which are denoted by  an '@' symbol followed by
-        // one or more non-whitespace characters.
-        const fileReferences = prompt.match(/@[^\s]+/g) || [];
-         // Replace file references with the content of the file
-         for (const fileRef of fileReferences) {
-            if (cancelTokenSource.token.isCancellationRequested) {
-                return;
-            }
-
-            quickPick.items = [{
-                label: `$(sync~spin) Loading file ${fileRef}...`,
-                alwaysShow: true
-            }];
-            const filePath = fileRef.slice(1); // Remove the '@' symbol
-            const fileContent = await this.ide.readFile(filePath);
-            prompt = prompt.replace(
-                fileRef,
-                `\`\`\`${filePath}\n${fileContent}\n\`\`\`\n\n`,
-            );
+      // Extracts all file references from the prompt string,
+      // which are denoted by  an '@' symbol followed by
+      // one or more non-whitespace characters.
+      const fileReferences = prompt.match(/@[^\s]+/g) || [];
+      // Replace file references with the content of the file
+      for (const fileRef of fileReferences) {
+        if (cancelTokenSource.token.isCancellationRequested) {
+          return;
         }
 
-        if (this.contextProviderStr) {
-            prompt = this.contextProviderStr + prompt;
-        }
-
-        this.webviewProtocol.request("incrementFtc", undefined);
         quickPick.items = [{
-            label: "$(sync~spin) Applying changes...",
-            alwaysShow: true
+          label: `$(sync~spin) Loading file ${fileRef}...`,
+          alwaysShow: true
         }];
-
-        const streamEditPromise = this.verticalDiffManager.streamEdit(
-            prompt,
-            modelTitle,
-            undefined,
-            this.previousInput,
-            this.range,
+        const filePath = fileRef.slice(1); // Remove the '@' symbol
+        const fileContent = await this.ide.readFile(filePath);
+        prompt = prompt.replace(
+          fileRef,
+          `\`\`\`${filePath}\n${fileContent}\n\`\`\`\n\n`,
         );
+      }
 
-        await streamEditPromise;
+      if (this.contextProviderStr) {
+        prompt = this.contextProviderStr + prompt;
+      }
+
+      this.webviewProtocol.request("incrementFtc", undefined);
+      quickPick.items = [{
+        label: "$(sync~spin) Applying changes...",
+        alwaysShow: true
+      }];
+
+      const streamEditPromise = this.verticalDiffManager.streamEdit(
+        prompt,
+        modelTitle,
+        undefined,
+        this.previousInput,
+        this.range,
+      );
+
+      await streamEditPromise;
     } catch (error) {
-        if (!(error instanceof Error && error.message === "Cancelled")) {
-            vscode.window.showErrorMessage(`Edit operation failed: ${error}`);
-        }
+      if (!(error instanceof Error && error.message === "Cancelled")) {
+        vscode.window.showErrorMessage(`Edit operation failed: ${error}`);
+      }
     } finally {
-        quickPick.dispose();
-        cancelTokenSource.dispose();
+      quickPick.dispose();
+      cancelTokenSource.dispose();
     }
-}
+  }
 
   async _getInitialQuickPickVal(): Promise<string | undefined> {
     const modelTitle = await this._getCurModelTitle();
@@ -472,9 +471,9 @@ export class QuickEdit {
         const filteredConfig = {
           ...config,
           models: config.models.filter((model: any) =>
-              !this.BLOCKED_MODELS.some(blocked => this._curModelTitle?.toLowerCase().includes(blocked.toLowerCase()))
+            !this.BLOCKED_MODELS.some(blocked => this._curModelTitle?.toLowerCase().includes(blocked.toLowerCase()))
           )
-      };
+        };
 
         const selectedModelTitle = await getModelQuickPickVal(
           curModelTitle,

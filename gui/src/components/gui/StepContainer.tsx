@@ -41,7 +41,7 @@ interface StepContainerProps {
   isLast: boolean;
   index: number;
   modelTitle?: string;
-  source?: "perplexity"| "continue";
+  source?: "perplexity" | "continue";
 }
 
 const ContentDiv = styled.div<{ isUserInput: boolean; fontSize?: number }>`
@@ -100,7 +100,7 @@ function StepContainer({
   const fetchNumberOfChanges = async () => {
     try {
       const response = await ideMessenger.request("getNumberOfChanges", undefined);
-      if(typeof response === 'number') {
+      if (typeof response === 'number') {
         setNumChanges(response);
       }
     } catch (error) {
@@ -149,33 +149,33 @@ function StepContainer({
   }, [isLast, active, isPerplexity, item.message.content, ideMessenger]);
 
   return (
-      <div className="relative pb-[13px]">
-        <ContentDiv
-          className="max-w-4xl mx-auto"
-          hidden={!open}
-          isUserInput={isUserInput}
-          fontSize={getFontSize()}
-        >
-          {uiConfig?.displayRawMarkdown ? (
-            <pre
-              className="whitespace-pre-wrap break-words p-4 max-w-full overflow-x-auto"
-              style={{ fontSize: getFontSize() - 2 }}
-            >
-              {stripImages(item.message.content)}
-            </pre>
-          ) : (
-            <StyledMarkdownPreview
-              source={stripImages(item.message.content)}
-              showCodeBorder={true}
-              isStreaming={active}
-              isLast={isLast}
-              messageIndex={index}
-              integrationSource={source}
-              citations={isPerplexity ? item.citations : undefined}
-            />
-          )}
+    <div className="relative pb-[13px]">
+      <ContentDiv
+        className="max-w-4xl mx-auto"
+        hidden={!open}
+        isUserInput={isUserInput}
+        fontSize={getFontSize()}
+      >
+        {uiConfig?.displayRawMarkdown ? (
+          <pre
+            className="whitespace-pre-wrap break-words p-4 max-w-full overflow-x-auto"
+            style={{ fontSize: getFontSize() - 2 }}
+          >
+            {stripImages(item.message.content)}
+          </pre>
+        ) : (
+          <StyledMarkdownPreview
+            source={stripImages(item.message.content)}
+            showCodeBorder={true}
+            isStreaming={active}
+            isLast={isLast}
+            messageIndex={index}
+            integrationSource={source}
+            citations={isPerplexity ? item.citations : undefined}
+          />
+        )}
 
-					{!active && (
+        {!active && (
           <div
             className="px-2 flex gap-1 justify-between mt-2"
             style={{
@@ -198,72 +198,72 @@ function StepContainer({
               </div>
             )}
 
-						<div className="flex">
-            {truncatedEarly && (
-							<HeaderButtonWithText
-                text="Continue generation"
+            <div className="flex">
+              {truncatedEarly && (
+                <HeaderButtonWithText
+                  text="Continue generation"
+                  onClick={(e) => {
+                    onContinueGeneration();
+                  }}
+                >
+                  <BarsArrowDownIcon
+                    color={lightGray}
+                    width="0.875rem"
+                    height="0.875rem"
+                    strokeWidth={2}
+                  />
+                </HeaderButtonWithText>
+              )}
+
+              <CopyButton
+                text={stripImages(item.message.content)}
+                color={lightGray}
+              />
+
+              <HeaderButtonWithText
+                text="Regenerate"
                 onClick={(e) => {
-                  onContinueGeneration();
+                  onRetry();
                 }}
               >
-                <BarsArrowDownIcon
+                <ArrowUturnLeftIcon
                   color={lightGray}
                   width="0.875rem"
                   height="0.875rem"
-									strokeWidth={2}
+                  strokeWidth={2}
                 />
               </HeaderButtonWithText>
-            )}
 
-            <CopyButton
-              text={stripImages(item.message.content)}
-              color={lightGray}
-            />
-            
-            <HeaderButtonWithText
-              text="Regenerate"
-              onClick={(e) => {
-                onRetry();
-              }}
-              >
-              <ArrowUturnLeftIcon
-                color={lightGray}
-                width="0.875rem"
-                height="0.875rem"
-                strokeWidth={2}
-              />
-            </HeaderButtonWithText>
-          
-            <HeaderButtonWithText text="Delete Message">
-              <TrashIcon
-                color={lightGray}
-                width="0.875rem"
-								height="0.875rem"
-								strokeWidth={2}
-                onClick={() => {
-									onDelete();
-                }}
-								/>
-            </HeaderButtonWithText>
-								</div>
+              <HeaderButtonWithText text="Delete Message">
+                <TrashIcon
+                  color={lightGray}
+                  width="0.875rem"
+                  height="0.875rem"
+                  strokeWidth={2}
+                  onClick={() => {
+                    onDelete();
+                  }}
+                />
+              </HeaderButtonWithText>
+            </div>
           </div>
         )}
-        </ContentDiv>
+      </ContentDiv>
 
-        {!active && isPerplexity && (
-          <HeaderButtonWithText
-            onClick={() => {
-              ideMessenger.post("addPerplexityContext", {
-                text: stripImages(item.message.content),
-                language: "",
-              });
-            }}
-          >
-            <ArrowLeftEndOnRectangleIcon className="w-4 h-4" />
-            Add to ascende.ai chat context {isLast && <span className="ml-1 text-xs opacity-60"><kbd className="font-mono">{getMetaKeyLabel()}</kbd> <kbd className="font-mono bg-vscButtonBackground/10 px-1">G</kbd></span>}
-          </HeaderButtonWithText>
-        )}
-      </div>
+      {!active && isPerplexity && (
+        <HeaderButtonWithText
+          onClick={() => {
+            ideMessenger.post("addPerplexityContext", {
+              text: stripImages(item.message.content),
+              language: "",
+            });
+          }}
+        >
+          <ArrowLeftEndOnRectangleIcon className="w-4 h-4" />
+          Add to ascende.ai chat context {isLast && <span className="ml-1 text-xs opacity-60"><kbd className="font-mono">{getMetaKeyLabel()}</kbd> <kbd className="font-mono bg-vscButtonBackground/10 px-1">G</kbd></span>}
+        </HeaderButtonWithText>
+      )}
+    </div>
   );
 }
 

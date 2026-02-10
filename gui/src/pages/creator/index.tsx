@@ -540,51 +540,51 @@ export const CreatorOverlay = () => {
 
             {(currentState === "GENERATING" ||
               currentState === "GENERATED") && (
-              <>
-                <motion.div
-                  initial={{ opacity: 0, scaleX: 0 }}
-                  animate={{ opacity: 1, scaleX: 1 }}
-                  exit={{ opacity: 0, scaleX: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    scaleX: { type: "spring", stiffness: 100, damping: 20 },
-                  }}
-                  key="planningBar"
-                  className="origin-center flex justify-center align-middle w-full mt-8"
-                >
-                  <PlanningBar
-                    requestedPlan={initialMessage}
-                    isStreaming={currentState === "GENERATING"}
-                    nextCallback={handleMakeIt}
-                    className="max-w-2xl w-full m-auto"
-                  />
-                </motion.div>
-
-                {/* Stage 2: Stream down the plan and display it to the user, let them comment and formulate the plan */}
-
-                <div className="w-full h-full flex justify-center">
+                <>
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    exit={{ opacity: 0, scaleX: 0 }}
                     transition={{
                       duration: 0.3,
                       scaleX: { type: "spring", stiffness: 100, damping: 20 },
                     }}
-                    key="planEditor"
-                    className="w-full max-w-2xl flex origin-center mb-12"
+                    key="planningBar"
+                    className="origin-center flex justify-center align-middle w-full mt-8"
                   >
-                    <PlanEditor
-                      initialMessage={initialMessage}
-                      handleUserChangeMessage={(msg: MessageContent) => {
-                        handleLlmCall(addMessage("user", msg));
-                      }}
+                    <PlanningBar
+                      requestedPlan={initialMessage}
                       isStreaming={currentState === "GENERATING"}
-                      messages={messages}
+                      nextCallback={handleMakeIt}
+                      className="max-w-2xl w-full m-auto"
                     />
                   </motion.div>
-                </div>
-              </>
-            )}
+
+                  {/* Stage 2: Stream down the plan and display it to the user, let them comment and formulate the plan */}
+
+                  <div className="w-full h-full flex justify-center">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        scaleX: { type: "spring", stiffness: 100, damping: 20 },
+                      }}
+                      key="planEditor"
+                      className="w-full max-w-2xl flex origin-center mb-12"
+                    >
+                      <PlanEditor
+                        initialMessage={initialMessage}
+                        handleUserChangeMessage={(msg: MessageContent) => {
+                          handleLlmCall(addMessage("user", msg));
+                        }}
+                        isStreaming={currentState === "GENERATING"}
+                        messages={messages}
+                      />
+                    </motion.div>
+                  </div>
+                </>
+              )}
           </AnimatePresence>
           <div className="flex-1" />
           <div className="flex w-full justify-center align-middle mb-8">

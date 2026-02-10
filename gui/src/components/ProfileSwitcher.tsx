@@ -79,7 +79,7 @@ const StyledListboxOptions = styled(Listbox.Options)`
   overflow-y: scroll;
 `;
 
-const StyledListboxOption = styled(Listbox.Option)<{ selected: boolean }>`
+const StyledListboxOption = styled(Listbox.Option) <{ selected: boolean }>`
   background-color: ${({ selected }) =>
     selected ? vscListActiveBackground : vscInputBackground};
   cursor: pointer;

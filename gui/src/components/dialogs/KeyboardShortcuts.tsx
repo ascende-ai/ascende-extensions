@@ -246,9 +246,9 @@ function KeyboardShortcutsDialog() {
   return (
     <div className="p-2">
       <GridDiv className="rounded-xl w-3/4 mx-auto" style={{
-          backgroundColor: vscEditorBackground,
-        }}>
-      <h3 className="my-1 text-center mb-0">Keyboard Shortcuts</h3>
+        backgroundColor: vscEditorBackground,
+      }}>
+        <h3 className="my-1 text-center mb-0">Keyboard Shortcuts</h3>
         {(isJetBrains() ? jetbrainsShortcuts : vscodeShortcuts).map(
           (shortcut, i) => {
             return (

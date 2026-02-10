@@ -209,7 +209,7 @@ export class DiffManager {
       try {
         vscode.window.showTextDocument(diffInfo.editor.document);
         vscode.commands.executeCommand("workbench.action.closeActiveEditor");
-      } catch {}
+      } catch { }
     }
     this.diffs.delete(diffInfo.newFilepath);
     vscode.workspace.fs.delete(uriFromFilePath(diffInfo.newFilepath));
@@ -245,7 +245,7 @@ export class DiffManager {
 
   async acceptDiff(newFilepath?: string) {
     this.webviewProtocol?.request("acceptedOrRejectedDiff", undefined, [PEARAI_CHAT_VIEW_ID])
-    this.webviewProtocol?.request("setRelaceDiffState", {diffVisible: false});
+    this.webviewProtocol?.request("setRelaceDiffState", { diffVisible: false });
     // When coming from a keyboard shortcut, we have to infer the newFilepath from visible text editors
     if (!newFilepath) {
       newFilepath = this.inferNewFilepath();
@@ -278,7 +278,7 @@ export class DiffManager {
 
   async rejectDiff(newFilepath?: string) {
     this.webviewProtocol?.request("acceptedOrRejectedDiff", undefined, [PEARAI_CHAT_VIEW_ID])
-    this.webviewProtocol?.request("setRelaceDiffState", {diffVisible: false});
+    this.webviewProtocol?.request("setRelaceDiffState", { diffVisible: false });
     // If no newFilepath is provided and there is only one in the dictionary, use that
     if (!newFilepath) {
       newFilepath = this.inferNewFilepath();
@@ -321,7 +321,7 @@ async function recordAcceptReject(accepted: boolean, diffInfo: DiffInfo) {
   try {
     const rawData = await readFile(suggestionsPath);
     suggestions = JSON.parse(rawData);
-  } catch {}
+  } catch { }
 
   // Add the new suggestion to the list
   suggestions.push({

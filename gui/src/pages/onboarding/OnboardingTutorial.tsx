@@ -89,7 +89,7 @@ const TutorialCardDiv = styled.div`
   flex-direction: column;
 `;
 
-const ContentWrapper = styled(motion.div)<{ direction: "left" | "right" }>`
+const ContentWrapper = styled(motion.div) <{ direction: "left" | "right" }>`
   opacity: 0;
   margin-top: 0.5rem;
   border-top: 1px solid ${vscInputBorderFocus};

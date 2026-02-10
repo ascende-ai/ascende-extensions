@@ -82,9 +82,9 @@ const StyledButton = styled.div<{
   border-radius: 0.6rem;
   box-shadow: 0px 0px 3px
     ${(props) =>
-      props.themeType === "light"
-        ? "rgba(0, 0, 0, 0.3)"
-        : "rgba(255, 255, 255, 0.3)"};
+    props.themeType === "light"
+      ? "rgba(0, 0, 0, 0.3)"
+      : "rgba(255, 255, 255, 0.3)"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,15 +104,15 @@ const StyledButton = styled.div<{
 
   &:hover:not(:disabled) {
     background-color: ${(props) =>
-      props.hoverBackgroundColor || vscInputBackground};
+    props.hoverBackgroundColor || vscInputBackground};
     border-color: ${(props) =>
-      props.hoverBackgroundColor || vscInputBackground};
+    props.hoverBackgroundColor || vscInputBackground};
   }
 `;
 
 const StyledLink = styled(StyledButton).attrs({
   as: "a",
-})<{ href: string; target?: string }>`
+}) <{ href: string; target?: string }>`
   white-space: nowrap;
   text-decoration: none;
 

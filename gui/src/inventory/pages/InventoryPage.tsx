@@ -156,7 +156,7 @@ export default function AIToolInventory() {
   useEffect(() => {
     setTools((prevTools) =>
       prevTools.map((tool) => {
-       if (tool.id === AIToolID.AUTOCOMPLETE) {
+        if (tool.id === AIToolID.AUTOCOMPLETE) {
           // Supermaven's ID
           return { ...tool, isInstalled: isSuperMavenInstalled };
         } else if (tool.id === AIToolID.MEMORY) {
@@ -403,9 +403,9 @@ export default function AIToolInventory() {
       ),
     );
 
-    switch(id) {
+    switch (id) {
       case AIToolID.MEMORY:
-        ideMessenger.post("config/toggleIntegration", {name: "mem0"});
+        ideMessenger.post("config/toggleIntegration", { name: "mem0" });
         break;
       default:
         break;

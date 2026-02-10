@@ -219,9 +219,8 @@ export const Ideation: React.FC<IdeationProps> = ({
               id: ButtonID.NEW_PROJECT,
               icon: (
                 <FolderPlus
-                  className={`${
-                    isCreatingProject ? "text-blue-500" : "text-gray-400"
-                  }`}
+                  className={`${isCreatingProject ? "text-blue-500" : "text-gray-400"
+                    }`}
                 />
               ),
               label: "New Project",
@@ -234,23 +233,22 @@ export const Ideation: React.FC<IdeationProps> = ({
             },
             ...(isCreatingProject
               ? [
-                  {
-                    id: ButtonID.MAKE_PLAN,
-                    icon: (
-                      <FileText
-                        className={`${
-                          makeAPlan ? "text-blue-500" : "text-gray-400"
+                {
+                  id: ButtonID.MAKE_PLAN,
+                  icon: (
+                    <FileText
+                      className={`${makeAPlan ? "text-blue-500" : "text-gray-400"
                         }`}
-                      />
-                    ),
-                    label: "Make a plan",
-                    togglable: true,
-                    variant: "secondary" as const,
-                    size: "sm" as const,
-                    toggled: makeAPlan,
-                    onToggle: (t) => setMakeAPlan(t),
-                  },
-                ]
+                    />
+                  ),
+                  label: "Make a plan",
+                  togglable: true,
+                  variant: "secondary" as const,
+                  size: "sm" as const,
+                  toggled: makeAPlan,
+                  onToggle: (t) => setMakeAPlan(t),
+                },
+              ]
               : []),
           ]}
           submitButton={{

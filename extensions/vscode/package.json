@@ -789,6 +789,8 @@
     "node-machine-id": "^1.1.12",
     "posthog-node": "^3.6.3",
     "react-markdown": "^8.0.7",
+    "react-use": "^17.6.0",
+    "react-virtuoso": "^4.12.3",
     "react-redux": "^8.0.5",
     "read-last-lines": "^1.8.0",
     "request": "^2.88.2",
