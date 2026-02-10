@@ -109,8 +109,8 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     // },
     {
       id: "supermaven",
-      name: "PearAI Predict",
-      description: "PearAI Predict is our upcoming code autocomplete tool. While it's under development, we recommend using Supermaven* as a standalone extension within PearAI for code autocompletion. Selecting this option will install Supermaven.",
+      name: "ascende.ai Predict",
+      description: "ascende.ai Predict is our upcoming code autocomplete tool. While it's under development, we recommend using Supermaven* as a standalone extension within ascende.ai for code autocompletion. Selecting this option will install Supermaven.",
       icon: "inventory-autocomplete.svg",
       preInstalled: false
     }
@@ -305,7 +305,7 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     {
       icon: <Terminal className="h-6 w-6" />,
       title: "Color Scheme",
-      description: "Change PearAI to a light or dark theme.",
+      description: "Change ascende.ai to a light or dark theme.",
       component: <ChangeColorScheme handleThemeChange={handleThemeChange} />,
       button: <Button
         className="text-xs font-['SF Pro']"
@@ -319,7 +319,7 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     {
       icon: <Download className="h-6 w-6" />,
       title: "Install Additional Tools",
-      description: "Install recommended tools to enhance your PearAI experience.",
+      description: "Install recommended tools to enhance your ascende.ai experience.",
       component: <InstallTools onNext={handleNextClick} tools={tools} checkedTools={checkedTools} setCheckedTools={setCheckedTools} attemptedInstalls={attemptedInstalls} />,
       button: <Button
         className="text-xs font-['SF Pro']"
@@ -331,7 +331,7 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     {
       icon: <User className="h-6 w-6" />,
       title: "Sign in",
-      description: "Have PearAI work for free out of the box by signing in.",
+      description: "Have ascende.ai work for free out of the box by signing in.",
       component: <SignIn onNext={handleNextClick} />,
       button: <>
         <Button

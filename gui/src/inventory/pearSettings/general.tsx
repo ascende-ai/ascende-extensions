@@ -95,7 +95,7 @@ const AccountSettings = () => {
             </div>
             <div className="flex w-full gap-3">
               <div className="flex-1 border border-solid p-4 rounded-lg flex flex-col gap-3">
-                <div className="font-normal font-['SF Pro']">PearAI Credits</div>
+                <div className="font-normal font-['SF Pro']">ascende.ai Credits</div>
                 <div className="self-stretch justify-start items-baseline gap-1 inline-flex">
                   <div className="text-2xl font-['SF Pro']">
                     {isUsageLoading ? (
@@ -252,7 +252,7 @@ const AccountSettings = () => {
           <div className="self-stretch rounded-lg justify-start items-center gap-3 inline-flex">
             <Button onClick={handleLogin}>Log in</Button>
             <div className="opacity-50 text-xs font-normal font-['SF Pro']">
-              Login to use PearAI Pro services
+              Login to use ascende.ai Pro services
             </div>
           </div>
         )}
@@ -330,7 +330,7 @@ const AccountSettings = () => {
             }}
           >
             <div className="text-xs font-normal font-['SF Pro']">
-              Open PearAI Agent Settings
+              Open ascende.ai Agent Settings
             </div>
             <ChevronRight className="size-4" />
           </div>

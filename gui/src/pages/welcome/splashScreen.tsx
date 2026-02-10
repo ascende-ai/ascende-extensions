@@ -14,7 +14,7 @@ const SplashScreen = ({ onNext }: { onNext: () => void }) => {
                     <img src={getBrandLogoPath(themeType)} alt="Ascende.ai Logo" />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div className="text-4xl font-['SF Pro']">Welcome to PearAI</div>
+                    <div className="text-4xl font-['SF Pro']">Welcome to ascende.ai</div>
                     <div className="text-xl font-['SF Pro']">The AI Code Editor For Your Next Project</div>
                 </div>
                 <Button className="mx-auto w-[300px] rounded-lg justify-center items-center gap-1 inline-flex overflow-hidden" onClick={onNext}>

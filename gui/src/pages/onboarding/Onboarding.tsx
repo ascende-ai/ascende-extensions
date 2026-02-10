@@ -41,7 +41,7 @@ function Onboarding() {
           style={{ marginRight: "5px" }}
           alt="Ascende.ai Logo"
         />
-      <h1 className="text-center">Welcome to PearAI!</h1>
+      <h1 className="text-center">Welcome to ascende.ai!</h1>
       <h3 className="mx-3 text-center flex">Begin your journey by logging in</h3>
       <Button 
         variant="animated"
@@ -66,7 +66,7 @@ function Onboarding() {
         }}
         className="mx-3"
       >
-        Note: Having trouble logging in? Open PearAI from the dashboard on the{" "}
+        Note: Having trouble logging in? Open ascende.ai from the dashboard on the{" "}
         <a
           href="https://trypear.ai/dashboard"
           target="_blank"

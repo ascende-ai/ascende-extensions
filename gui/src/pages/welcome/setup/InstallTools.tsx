@@ -27,7 +27,7 @@ export default function InstallTools({
       <div className="flex-1 flex items-center justify-center">
         <div className="w-full max-w-[800px] flex flex-col">
           <div className="text-xl md:text-2xl lg:text-2xl text-foreground mb-8 text-center max-w-[600px] mx-auto">
-            PearAI requires some extra installation for the following integrations
+            ascende.ai requires some extra installation for the following integrations
           </div>
 
           <div className="flex-1 overflow-y-auto mx-6">

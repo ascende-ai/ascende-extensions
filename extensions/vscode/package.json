@@ -23,7 +23,7 @@
   },
   "homepage": "https://trypear.ai",
   "qna": "https://github.com/trypear/pearai-app/issues/new/choose",
-  "displayName": "PearAI",
+  "displayName": "ascende.ai",
   "license": "Apache-2.0",
   "pricing": "Free",
   "description": "Supercharge your development with AI",
@@ -72,22 +72,22 @@
       }
     ],
     "configuration": {
-      "title": "PearAI",
+      "title": "ascende.ai",
       "properties": {
         "pearai.telemetryEnabled": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "PearAI collects anonymous usage data, cleaned of PII, to help us improve the product for our users. Read more  at [pearai.dev › Telemetry](https://trypear.ai/telemetry)."
+          "markdownDescription": "ascende.ai collects anonymous usage data, cleaned of PII, to help us improve the product for our users. Read more  at [pearai.dev › Telemetry](https://trypear.ai/telemetry)."
         },
         "pearai.enableContinueForTeams": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "_(Requires window reload)_ Enable PearAI for teams beta features. To sign in, click the person icon in the bottom right of the sidebar."
+          "markdownDescription": "_(Requires window reload)_ Enable ascende.ai for teams beta features. To sign in, click the person icon in the bottom right of the sidebar."
         },
         "pearai.showInlineTip": {
           "type": "boolean",
           "default": true,
-          "description": "Show inline suggestion to use the PearAI keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
+          "description": "Show inline suggestion to use the ascende.ai keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
         },
         "pearai.enableQuickActions": {
           "type": "boolean",
@@ -97,22 +97,22 @@
         "pearai.enableTabAutocomplete": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Enable PearAI's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [pearai.dev › Walkthrough: Tab Autocomplete (beta)](https://trypear.ai/docs/tab-autocomplete)"
+          "markdownDescription": "Enable ascende.ai's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [pearai.dev › Walkthrough: Tab Autocomplete (beta)](https://trypear.ai/docs/tab-autocomplete)"
         },
         "pearai.pauseTabAutocompleteOnBattery": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause PearAI's tab autocomplete feature when your battery is low."
+          "markdownDescription": "Pause ascende.ai's tab autocomplete feature when your battery is low."
         },
         "pearai.pauseCodebaseIndexOnStart": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause PearAI's codebase index on start."
+          "markdownDescription": "Pause ascende.ai's codebase index on start."
         },
         "pearai.enableDebugLogs": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable PearAI Debug Logs in the Output panel."
+          "markdownDescription": "Enable ascende.ai Debug Logs in the Output panel."
         },
         "pearai.remoteConfigServerUrl": {
           "type": "string",
@@ -134,255 +134,255 @@
     "commands": [
       {
         "command": "pearai.acceptDiff",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Accept Diff",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.rejectDiff",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Reject Diff",
-        "group": "PearAI",
+        "group": "ascende.ai",
         "icon": "$(stop)"
       },
       {
         "command": "pearai.acceptVerticalDiffBlock",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Accept Vertical Diff Block",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.rejectVerticalDiffBlock",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Reject Vertical Diff Block",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.quickEdit",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Generate Code",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleCreator",
-        "category": "PearAI",
-        "title": "Toggle PearAI Creator",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Toggle ascende.ai Creator",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleSearch",
-        "category": "PearAI",
-        "title": "Toggle PearAI Search",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Toggle ascende.ai Search",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleMem0",
-        "category": "PearAI",
-        "title": "Toggle PearAI Memory",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Toggle ascende.ai Memory",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleInventorySettings",
-        "category": "PearAI",
-        "title": "Toggle PearAI Inventory",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Toggle ascende.ai Inventory",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.startOnboarding",
-        "category": "PearAI Developer",
-        "title": "Start PearAI Onboarding",
-        "group": "PearAI"
+        "category": "ascende.ai Developer",
+        "title": "Start ascende.ai Onboarding",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.developer.restFirstLaunch",
-        "category": "PearAI Developer",
-        "title": "Reset PearAI Onboarding",
-        "group": "PearAI"
+        "category": "ascende.ai Developer",
+        "title": "Reset ascende.ai Onboarding",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.focusAgentView",
-        "category": "PearAI",
-        "title": "Focus PearAI Agent View",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Focus ascende.ai Agent View",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.focusPearAISearchView",
-        "category": "PearAI",
-        "title": "Focus PearAI Search View",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Focus ascende.ai Search View",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.focusPearAIMem0View",
-        "category": "PearAI",
-        "title": "Focus PearAI Memory View",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Focus ascende.ai Memory View",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.focusContinueInput",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Add Highlighted Code to Context",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.focusContinueInputWithoutClear",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Add Highlighted Code to Context",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.debugTerminal",
-        "category": "PearAI",
-        "title": "PearAI: Debug Terminal",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "ascende.ai: Debug Terminal",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleFullScreen",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Toggle Full Screen",
         "icon": "$(fullscreen)",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.openConfigJson",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Open config.json",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.openPearAiWelcome",
-        "category": "PearAI",
-        "title": "Open Welcome page for PearAI",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Open Welcome page for ascende.ai",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.toggleTabAutocompleteEnabled",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Toggle Autocomplete Enabled",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.selectFilesAsContext",
-        "category": "PearAI",
-        "title": "PearAI: Select Files as Context",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "ascende.ai: Select Files as Context",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.newSession",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "New Session",
         "icon": "$(add)",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.newSessionSearch",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "New Search Session",
         "icon": "$(add)",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.viewHistory",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "View History",
         "icon": "$(history)",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.viewHistorySearch",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "View Search History",
         "icon": "$(history)",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.writeCommentsForCode",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Write Comments for this Code",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.writeDocstringForCode",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Write a Docstring for this Code",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.fixCode",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Fix this Code",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.optimizeCode",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Optimize this Code",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.fixGrammar",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Fix Grammar / Spelling",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.codebaseForceReIndex",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Codebase Force Re-Index",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.docsIndex",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Docs Index",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.docsReIndex",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Docs Force Re-Index",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.login",
-        "category": "PearAI",
-        "title": "Login to PearAI",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Login to ascende.ai",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.logout",
-        "category": "PearAI",
-        "title": "Logout of PearAI",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Logout of ascende.ai",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.manualLogin",
-        "category": "PearAI Developer",
-        "title": "Manual PearAI Login",
-        "group": "PearAI"
+        "category": "ascende.ai Developer",
+        "title": "Manual ascende.ai Login",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.loadRecentChat",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Load Recent Chat",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.resizeAuxiliaryBarWidth",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Resize Chat",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.macResizeAuxiliaryBarWidth",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Big Chat - CMD + [",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.winResizeAuxiliaryBarWidth",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Big Chat - CTRL + [",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.patchWSL",
@@ -392,20 +392,20 @@
       },
       {
         "command": "pearai.perplexityMode",
-        "category": "PearAI",
-        "title": "Open PearAI Search",
-        "group": "PearAI"
+        "category": "ascende.ai",
+        "title": "Open ascende.ai Search",
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.showInteractiveContinueTutorial",
-        "category": "PearAI",
+        "category": "ascende.ai",
         "title": "Show Chat Tutorial",
-        "group": "PearAI"
+        "group": "ascende.ai"
       },
       {
         "command": "pearai.notifyOverlayOpened",
         "title": "Dev - Overlay Opened",
-        "group": "PearAI"
+        "group": "ascende.ai"
       }
     ],
     "keybindings": [
@@ -523,7 +523,7 @@
     "submenus": [
       {
         "id": "pearai.continueSubMenu",
-        "label": "PearAI"
+        "label": "ascende.ai"
       }
     ],
     "menus": {
@@ -568,39 +568,39 @@
       "editor/title/run": [
         {
           "command": "pearai.rejectDiff",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "pearai.streamingDiff"
         }
       ],
       "pearai.continueSubMenu": [
         {
           "command": "pearai.focusContinueInputWithoutClear",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection"
         },
         {
           "command": "pearai.writeCommentsForCode",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection"
         },
         {
           "command": "pearai.writeDocstringForCode",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection"
         },
         {
           "command": "pearai.fixCode",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection"
         },
         {
           "command": "pearai.optimizeCode",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection"
         },
         {
           "command": "pearai.fixGrammar",
-          "group": "PearAI",
+          "group": "ascende.ai",
           "when": "editorHasSelection && editorLangId == 'markdown'"
         }
       ],
@@ -655,17 +655,17 @@
       "auxiliarybar": [
         {
           "id": "pearaiChat",
-          "title": "PearAI Chat",
+          "title": "ascende.ai Chat",
           "icon": "media/sidebar-icon.png"
         },
         {
           "id": "pearaiSearch",
-          "title": "PearAI Search",
+          "title": "ascende.ai Search",
           "icon": "media/sidebar-icon.png"
         },
         {
           "id": "pearaiMemory",
-          "title": "PearAI Memory",
+          "title": "ascende.ai Memory",
           "icon": "media/sidebar-icon.png"
         }
       ]
@@ -675,7 +675,7 @@
         {
           "type": "webview",
           "id": "pearai.chatView",
-          "name": "PearAI Chat",
+          "name": "ascende.ai Chat",
           "visibility": "visible"
         }
       ],
@@ -683,7 +683,7 @@
         {
           "type": "webview",
           "id": "pearai.searchView",
-          "name": "PearAI Search",
+          "name": "ascende.ai Search",
           "visibility": "visible"
         }
       ],
@@ -691,7 +691,7 @@
         {
           "type": "webview",
           "id": "pearai.mem0View",
-          "name": "PearAI Memory",
+          "name": "ascende.ai Memory",
           "visibility": "visible"
         }
       ]

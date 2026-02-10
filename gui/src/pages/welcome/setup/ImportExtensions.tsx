@@ -7,13 +7,14 @@ export const getLogoPath = (assetName: string) => {
 
 /**
  * Returns the brand logo path based on the current theme.
- * For dark themes: returns ascendeai-branco.png (white logo)
- * For light themes: returns ascendeai-preto.png (black logo)
+ * Uses pearai.png / pearai-color.png for compatibility across all extension builds.
+ * - Dark themes: pearai-color.png (white/light logo for dark background)
+ * - Light themes: pearai.png (black/dark logo for light background)
  */
 export const getBrandLogoPath = (themeType?: string) => {
   // Default to dark if themeType is not provided
   const isDark = themeType !== 'light';
-  const logoName = isDark ? 'ascendeai-branco.png' : 'ascendeai-preto.png';
+  const logoName = isDark ? 'pearai-color.png' : 'pearai.png';
   return getLogoPath(logoName);
 };
 
@@ -22,7 +23,7 @@ export default function ImportExtensions({ importError, isDone }: { importError:
   return (
     <div className="flex flex-col items-center justify-center h-full relative gap-5">
       <div className="self-stretch text-center text-2xl font-['SF Pro']">
-        Import your VS Code extensions to PearAI
+        Import your VS Code extensions to ascende.ai
       </div>
       <div className="flex items-center justify-center gap-8">
         <img src={getLogoPath("vscode.svg")} className="w-[100px] h-[100px]" alt="VS Code" />

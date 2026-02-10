@@ -45,7 +45,7 @@ export function useAuth(): {
             setDialogMessage(
               <ConfirmationDialog
                 text={
-                  "Welcome to PearAI for teams! Using the toggle in the bottom right, you can switch between your local profile (defined by config.json) and team profiles (defined in the PearAI for teams web app). Each profile defines a set of models, slash commands, context providers, and other settings to customize PearAI."
+                  "Welcome to ascende.ai for teams! Using the toggle in the bottom right, you can switch between your local profile (defined by config.json) and team profiles (defined in the ascende.ai for teams web app). Each profile defines a set of models, slash commands, context providers, and other settings to customize ascende.ai."
                 }
                 hideCancelButton={true}
                 confirmText="Ok"
@@ -64,7 +64,7 @@ export function useAuth(): {
       setDialogMessage(
         <ConfirmationDialog
           confirmText="Yes, log out"
-          text={"Are you sure you want to log out of PearAI?"}
+          text={"Are you sure you want to log out of ascende.ai?"}
           onConfirm={() => {
             ideMessenger.request("logoutOfControlPlane", undefined);
           }}

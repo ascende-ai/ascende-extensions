@@ -105,7 +105,7 @@ export class DiffManager {
 
     const rightUri = uriFromFilePath(newFilepath);
     const leftUri = uriFromFilePath(originalFilepath);
-    const title = "PearAI Diff View";
+    const title = "ascende.ai Diff View";
     vscode.commands.executeCommand("vscode.diff", leftUri, rightUri, title);
 
     const editor = vscode.window.activeTextEditor;

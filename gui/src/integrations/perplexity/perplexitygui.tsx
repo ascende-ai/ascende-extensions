@@ -304,7 +304,7 @@ function PerplexityGUI() {
           textColor="#FFFFFF"
           backgroundColor="#0fb5af"
           content="Search"
-          blurb={<div><p>When you need to find information where recency is important. Regular LLMs' knowledge are outdated by several months, whereas PearAI Search is able to search the web for latest data.</p><p>Powered by Perplexity.</p></div>}
+          blurb={<div><p>When you need to find information where recency is important. Regular LLMs' knowledge are outdated by several months, whereas ascende.ai Search is able to search the web for latest data.</p><p>Powered by Perplexity.</p></div>}
           useful={<div><p>Most up-to-date information, real-time web search.</p><p>Also good for non-coding specific questions</p><p>Uses less credits than other tools</p></div>}
           alt={<p>Use Chat or Creator to make changes to files.</p>}
         /> */}
@@ -357,14 +357,14 @@ function PerplexityGUI() {
                     <div className="flex-1 flex absolute bottom-[260px] items-center justify-center">
                       <img
                         src={getLogoPath("pearai-search-splash.svg")}
-                        alt="PearAI Search Splash"
+                        alt="ascende.ai Search Splash"
                       />
                     </div>
 
                     <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">
                       <div className="flex flex-col text-left">
                         <div className="text-2xl font-['SF Pro']">
-                          PearAI Search
+                          ascende.ai Search
                         </div>
                         <div className="h-[18px] opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
                           Powered by Perplexity
@@ -594,7 +594,7 @@ function PerplexityGUI() {
       )}
 
       {/* <div className="text-[10px] text-muted-foreground mb-4 flex justify-end pr-2 pb-2">
-        *View PearAI Disclaimer page{" "}
+        *View ascende.ai Disclaimer page{" "}
         <Link
           to="https://trypear.ai/disclaimer/"
           target="_blank"
@@ -610,7 +610,7 @@ function PerplexityGUI() {
 
 const tutorialContent = {
   goodFor: "Searching documentation, debugging errors, quick look-ups",
-  notGoodFor: "Direct feature implementations (use PearAI Creator instead)",
+  notGoodFor: "Direct feature implementations (use ascende.ai Creator instead)",
   example: {
     text: '"What\'s new in the latest python version?"',
     copyText: "What's new in the latest python version?",

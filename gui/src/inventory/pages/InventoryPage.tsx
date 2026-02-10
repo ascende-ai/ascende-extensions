@@ -202,7 +202,7 @@ export default function AIToolInventory() {
       whenToUse: (
         <span>
           When you need to find information where recency is important. Regular
-          LLMs' knowledge are outdated by several months, whereas PearAI Search
+          LLMs' knowledge are outdated by several months, whereas ascende.ai Search
           is able to search the web for latest data
         </span>
       ),
@@ -285,7 +285,7 @@ export default function AIToolInventory() {
     },
     {
       id: AIToolID.AGENT,
-      name: "PearAI Agent",
+      name: "ascende.ai Agent",
       description: (
         <span>Autonomous coding agent with controlled IDE access.</span>
       ),
@@ -311,7 +311,7 @@ export default function AIToolInventory() {
       name: "Memory",
       description: (
         <span>
-          Personalization: let PearAI get to know your coding preferences
+          Personalization: let ascende.ai get to know your coding preferences
         </span>
       ),
       icon: "inventory-mem0.svg",
@@ -342,7 +342,7 @@ export default function AIToolInventory() {
       name: "Developer Wrapped",
       featureFlag: DEVELOPER_WRAPPED_FEATURE_FLAG,
       description: (
-        <span>View your year in code - only in PearAI! 🎉</span>
+        <span>View your year in code - only in ascende.ai! 🎉</span>
       ),
       icon: "🎁",
       whenToUse: (
@@ -465,7 +465,7 @@ export default function AIToolInventory() {
       <div className="flex flex-col h-[73vh] overflow-y-auto text-foreground">
         <header className="flex-none mb-6">
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-bold mb-2 ml-4">PearAI Inventory</h1>
+            <h1 className="text-2xl font-bold mb-2 ml-4">ascende.ai Inventory</h1>
             <div className="relative mt-2 w-full max-w-md">
               <Search
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground opacity-60"
@@ -567,7 +567,7 @@ export default function AIToolInventory() {
                   </div>
                 </div>
                 <div className="text-[10px] text-muted-foreground mt-4">
-                  *View PearAI Disclaimer page{" "}
+                  *View ascende.ai Disclaimer page{" "}
                   <Link
                     to="https://trypear.ai/disclaimer/"
                     target="_blank"

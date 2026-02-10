@@ -170,19 +170,19 @@ export class VsCodeWebviewProtocol
             } else if (e.cause.code === "ECONNREFUSED") {
               message = `Connection was refused. This likely means that there is no server running at the specified URL. If you are running your own server you may need to set the "apiBase" parameter in config.json. For example, you can set up an OpenAI-compatible server like here: https://trypear.ai/reference/Model%20Providers/openai#openai-compatible-servers--apis`;
             } else {
-              message = `The request failed with "${e.cause.name}": ${e.cause.message}. If you're having trouble setting up PearAI, please see the troubleshooting guide for help.`;
+              message = `The request failed with "${e.cause.name}": ${e.cause.message}. If you're having trouble setting up ascende.ai, please see the troubleshooting guide for help.`;
             }
           }
           // PearAI login issues
-          else if (message.includes("401") && message.includes("PearAI")) {
+          else if (message.includes("401") && (message.includes("PearAI") || message.includes("ascende.ai"))) {
             vscode.window
               .showErrorMessage(
                 message,
-                'Login To PearAI',
+                'Login To ascende.ai',
                 'Show Logs',
               )
               .then((selection) => {
-                if (selection === 'Login To PearAI') {
+                if (selection === 'Login To ascende.ai') {
                   // Redirect to auth login URL
                   vscode.env.openExternal(
                     vscode.Uri.parse(
@@ -197,15 +197,15 @@ export class VsCodeWebviewProtocol
               });
           }
           // PearAI Free trial ended case
-          else if (message.includes("403") && message.includes("PearAI")) {
+          else if (message.includes("403") && (message.includes("PearAI") || message.includes("ascende.ai"))) {
             vscode.window
               .showErrorMessage(
                 message,
-                'View PearAI Pricing',
+                'View ascende.ai Pricing',
                 'Show Logs',
               )
               .then((selection) => {
-                if (selection === 'View PearAI Pricing') {
+                if (selection === 'View ascende.ai Pricing') {
                   // Redirect to auth login URL
                   vscode.env.openExternal(
                     vscode.Uri.parse(
@@ -226,7 +226,7 @@ export class VsCodeWebviewProtocol
             } catch {}
             if (message.includes("exceeded")) {
               message +=
-                " To keep using PearAI, you can set up a local model or use your own API key.";
+                " To keep using ascende.ai, you can set up a local model or use your own API key.";
             }
 
             vscode.window

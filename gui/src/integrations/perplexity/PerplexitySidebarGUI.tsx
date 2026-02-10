@@ -296,7 +296,7 @@ function PerplexitySidebarGUI() {
           textColor="#FFFFFF"
           backgroundColor="#0fb5af"
           content="Search"
-          blurb={<div><p>When you need to find information where recency is important. Regular LLMs' knowledge are outdated by several months, whereas PearAI Search is able to search the web for latest data.</p><p>Powered by Perplexity.</p></div>}
+          blurb={<div><p>When you need to find information where recency is important. Regular LLMs' knowledge are outdated by several months, whereas ascende.ai Search is able to search the web for latest data.</p><p>Powered by Perplexity.</p></div>}
           useful={<div><p>Most up-to-date information, real-time web search.</p><p>Also good for non-coding specific questions</p><p>Uses less credits than other tools</p></div>}
           alt={<p>Use Chat or Creator to make changes to files.</p>}
         /> */}
@@ -345,11 +345,11 @@ function PerplexitySidebarGUI() {
                   <div className="w-full text-center flex flex-col items-center justify-center relative gap-5">
                     <img
                       src={getLogoPath("pearai-search-splash.svg")}
-                      alt="PearAI Search Splash"
+                      alt="ascende.ai Search Splash"
                     />
                     <div className="w-[300px] flex-col justify-start items-start gap-5 inline-flex">
                       <div className="flex flex-col text-left">
-                        <div className="text-2xl font-['SF Pro']">PearAI Search</div>
+                        <div className="text-2xl font-['SF Pro']">ascende.ai Search</div>
                         <div className="h-[18px] opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">Powered by Perplexity</div>
                       </div>
                     </div>
@@ -361,7 +361,7 @@ function PerplexitySidebarGUI() {
               ) : (
                 <div className="pl-2">
                   <div className="flex items-center gap-2">
-                    <h1 className="text-2xl font-bold mb-2">PearAI Search</h1>
+                    <h1 className="text-2xl font-bold mb-2">ascende.ai Search</h1>
                     <Badge variant="outline" className="pl-0">
                       (Powered by Perplexity*)
                     </Badge>
@@ -588,7 +588,7 @@ function PerplexitySidebarGUI() {
       )}
 
       {/* <div className="text-[10px] text-muted-foreground mb-4 flex justify-end pr-2 pb-2">
-        *View PearAI Disclaimer page{" "}
+        *View ascende.ai Disclaimer page{" "}
         <Link
           to="https://trypear.ai/disclaimer/"
           target="_blank"
@@ -604,7 +604,7 @@ function PerplexitySidebarGUI() {
 
 const tutorialContent = {
   goodFor: "Searching documentation, debugging errors, quick look-ups",
-  notGoodFor: "Direct feature implementations (use PearAI Creator instead)",
+  notGoodFor: "Direct feature implementations (use ascende.ai Creator instead)",
   example: {
     text: '"What\'s new in the latest python version?"',
     copyText: "What's new in the latest python version?",

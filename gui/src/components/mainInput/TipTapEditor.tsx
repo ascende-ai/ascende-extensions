@@ -780,7 +780,7 @@ const TipTapEditor = memo(function TipTapEditor({
 
       const item: ContextItemWithId = {
         content: data.text,
-        name: "Context from PearAI Search",
+        name: "Context from ascende.ai Search",
         description: "Context from result of Perplexity AI",
         id: {
           providerTitle: "code",

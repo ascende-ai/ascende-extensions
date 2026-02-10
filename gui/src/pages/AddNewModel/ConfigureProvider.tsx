@@ -449,7 +449,7 @@ function ConfigureProvider() {
                   }}
                   className="mx-3"
                 >
-                  Note: Having trouble logging in? Open PearAI from the dashboard on the {' '}
+                  Note: Having trouble logging in? Open ascende.ai from the dashboard on the {' '}
                   <a href="https://trypear.ai/dashboard" target="_blank" rel="noopener noreferrer">
                     website
                   </a>.

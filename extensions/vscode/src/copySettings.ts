@@ -156,7 +156,7 @@ export async function markCreatorOnboardingCompleteFileBased() {
         await new Promise(resolve => setTimeout(resolve, 3000));
 
         const flagFile = firstPearAICreatorLaunchFlag;
-        const productName = 'PearAI Creator';
+        const productName = 'ascende.ai Creator';
 
         const exists = await fs.promises.access(flagFile).then(() => true).catch(() => false);
         if (!exists) {

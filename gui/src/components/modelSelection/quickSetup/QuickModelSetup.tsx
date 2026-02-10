@@ -37,7 +37,7 @@ function QuickModelSetup(props: QuickModelSetupProps) {
         {!props.hideFreeTrialLimitMessage && hasPassedFTL() && (
           <p className="text-sm text-gray-500">
             You've reached the free trial limit of {FREE_TRIAL_LIMIT_REQUESTS}{" "}
-            free inputs. To keep using PearAI, you can either use your own API
+            free inputs. To keep using ascende.ai, you can either use your own API
             key, or use a local LLM. To read more about the options, see our{" "}
             <a
               href="https://trypear.ai/setup/overview"

@@ -60,7 +60,7 @@ export default function FinalStep({
       {/* <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
             <img
               src={`${window.vscMediaUrl}/logos/pearai-green.svg`}
-              alt="PearAI"
+              alt="ascende.ai"
               className="w-full h-full object-contain"
             />
           </div> */}
@@ -68,7 +68,7 @@ export default function FinalStep({
         You're all set!
       </div>
       <div className="flex flex-col items-center gap-4 ">
-        {/* Hidden: PearAI Creator button temporarily disabled */}
+        {/* Hidden: ascende.ai Creator button temporarily disabled */}
         <div className="creator-button-container w-[250px] md:w-[280px] mb-4 hidden">
           <div className="rainbow-border-glow rainbow-border-glow-visible scale-105"></div>
           <Button
@@ -77,7 +77,7 @@ export default function FinalStep({
           >
             <div className="flex items-center justify-center w-full gap-2">
               <div className="flex items-center gap-2">
-                <span className="flex-1">PearAI Creator</span>
+                <span className="flex-1">ascende.ai Creator</span>
               </div>
             </div>
           </Button>

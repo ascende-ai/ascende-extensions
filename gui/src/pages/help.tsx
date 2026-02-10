@@ -135,7 +135,7 @@ function HelpPage() {
   const themeType = useThemeType();
   const buttonBorders = "border-foreground-muted border-1 border-solid"
   const ideMessenger = useContext(IdeMessengerContext);
-  const [session, setSession] = useState(false); // this state specifically serves to manage "Login to PearAI" text conditionally on auth status
+  const [session, setSession] = useState(false); // this state specifically serves to manage "Login to ascende.ai" text conditionally on auth status
 
   // gets initial auth status
   useEffect(() => {
@@ -184,7 +184,7 @@ function HelpPage() {
               navigate("/");
             }}
           >
-            {session ? "Relogin to PearAI" : "Login to PearAI"}
+            {session ? "Relogin to ascende.ai" : "Login to ascende.ai"}
           </StyledButton>
           <StyledLink
             href="https://trypear.ai/"
@@ -192,7 +192,7 @@ function HelpPage() {
             themeType={themeType}
             className={`${buttonBorders}`}
           >
-            PearAI Website
+            ascende.ai Website
           </StyledLink>
 
           <StyledButton

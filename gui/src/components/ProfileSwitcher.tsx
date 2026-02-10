@@ -146,7 +146,7 @@ function ProfileSwitcher(props: {}) {
         !lastControlServerBetaEnabledStatus && enableControlServerBeta;
 
       if (shouldShowPopup) {
-        ideMessenger.ide.infoPopup("PearAI for Teams enabled");
+        ideMessenger.ide.infoPopup("ascende.ai for Teams enabled");
       }
 
       setControlServerBetaEnabled(enableControlServerBeta);
@@ -238,7 +238,7 @@ function ProfileSwitcher(props: {}) {
         onClick={() => {
           ideMessenger.post("openConfigJson", undefined);
         }}
-        text="Configure PearAI"
+        text="Configure ascende.ai"
       >
         <CogIcon width="1.4em" height="1.4em" />
       </HeaderButtonWithText>
@@ -251,7 +251,7 @@ function ProfileSwitcher(props: {}) {
           text={
             session?.account
               ? `Logged in as ${session.account.label}`
-              : "Click to login to PearAI"
+              : "Click to login to ascende.ai"
           }
           onClick={() => {
             if (session?.account) {

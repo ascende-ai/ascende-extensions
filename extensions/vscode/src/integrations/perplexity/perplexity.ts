@@ -25,7 +25,7 @@ export async function handlePerplexityMode(
   //create the full screen panel
   let panel = vscode.window.createWebviewPanel(
     webviewName,
-    "PearAI Search (Powered by Perplexity)",
+    "ascende.ai Search (Powered by Perplexity)",
     vscode.ViewColumn.One,
     {
       retainContextWhenHidden: true,

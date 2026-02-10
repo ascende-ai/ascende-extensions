@@ -88,7 +88,7 @@ export class QuickEdit {
     'perplexity',
   ];
 
-  private DEFAULT_MODEL = 'PearAI Model (Recommended)';
+  private DEFAULT_MODEL = 'ascende.ai Model (Recommended)';
 
 
   constructor(

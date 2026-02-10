@@ -4,7 +4,7 @@ export const miscSlice = createSlice({
   name: "misc",
   initialState: {
     takenAction: false,
-    serverStatusMessage: "PearAI Server Starting",
+    serverStatusMessage: "ascende.ai Server Starting",
     lastControlServerBetaEnabledStatus: false,
   },
   reducers: {

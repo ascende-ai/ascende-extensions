@@ -8,14 +8,14 @@ export default function AddToPath({
 
   return (
     <div className="flex flex-col items-center gap-5 justify-center w-full h-full overflow-hidden text-foreground relative">
-      <div className="text-center text-2xl font-['SF Pro']">Access PearAI directly from your terminal.</div>
+      <div className="text-center text-2xl font-['SF Pro']">Access ascende.ai directly from your terminal.</div>
 
       <Terminal />
       <div className="flex flex-col items-center gap-4 absolute bottom-14">
         {pathAdded && (
           <div className="text-sm text-muted-foreground text-center">
             <span>
-              PearAI added to PATH
+              ascende.ai added to PATH
             </span>
           </div>
         )}

@@ -155,7 +155,7 @@ function ModelOption({
                 src={getBrandLogoPath(themeType)}
                 className="w-4 h-4 object-contain"
               />
-              {!option.title.toLowerCase().includes('pearai model') && <img
+              {!option.title.toLowerCase().includes('ascende.ai model') && <img
                 src={`${window.vscMediaUrl}/logos/${(() => {
                   const modelTitle = option.title.toLowerCase();
                   switch (true) {
@@ -318,7 +318,7 @@ function ModelSelect() {
                     src={getBrandLogoPath(themeType)}
                     className="w-[15px] h-[15px] object-contain"
                   />
-                  {!defaultModel.title.toLowerCase().includes('pearai') && <img
+                  {!defaultModel.title.toLowerCase().includes('ascende.ai') && <img
                     src={`${window.vscMediaUrl}/logos/${(() => {
                       const modelTitle = defaultModel.title.toLowerCase();
                       switch (true) {

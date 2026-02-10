@@ -184,7 +184,7 @@ export const Ideation: React.FC<IdeationProps> = ({
         <PearIcon className="my-auto size-7" />
         <div className="my-auto font-semibold text-2xl">
           {/* {isCreatingProject ? "What would you like to make?" : "What would you like to do?"} */}
-          PearAI Creator
+          ascende.ai Creator
         </div>
         {/* <div>beta</div> */}
         <div
@@ -209,8 +209,8 @@ export const Ideation: React.FC<IdeationProps> = ({
           isDisabled={false}
           placeholder={
             isCreatingProject
-              ? "What would you like to make? PearAI Creator will start your project off with strong foundations - currently works best with web applications."
-              : "Ask PearAI Creator to add new features, fix bugs, and more to your current project!"
+              ? "What would you like to make? ascende.ai Creator will start your project off with strong foundations - currently works best with web applications."
+              : "Ask ascende.ai Creator to add new features, fix bugs, and more to your current project!"
           }
           lockToWhite
           maxHeight="40vh"

@@ -12,7 +12,7 @@ export default function SignIn({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col items-center justify-center md:p-6 lg:p-10 gap-5">
       <div className="flex flex-col items-center justify-center gap-1">
-        <div className="text-center text-2xl font-['SF Pro']">Sign in to PearAI</div>
+        <div className="text-center text-2xl font-['SF Pro']">Sign in to ascende.ai</div>
         <div className="opacity-80 text-xs font-normal font-['SF Pro'] leading-[18px]">(Opens in browser)</div>
       </div>
       <img src={getBrandLogoPath(themeType)} className="w-36 h-36" alt="Ascende.ai Logo" />

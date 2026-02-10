@@ -554,7 +554,7 @@ function GUI() {
 
                 <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">
                   <div className="flex flex-col text-left">
-                    <div className="text-2xl">PearAI Chat</div>
+                    <div className="text-2xl">ascende.ai Chat</div>
                     <div className="h-[18px] opacity-50 text-xs leading-[18px]">
                       Powered by Continue
                     </div>

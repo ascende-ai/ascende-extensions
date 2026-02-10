@@ -260,7 +260,7 @@ function StepContainer({
             }}
           >
             <ArrowLeftEndOnRectangleIcon className="w-4 h-4" />
-            Add to PearAI chat context {isLast && <span className="ml-1 text-xs opacity-60"><kbd className="font-mono">{getMetaKeyLabel()}</kbd> <kbd className="font-mono bg-vscButtonBackground/10 px-1">G</kbd></span>}
+            Add to ascende.ai chat context {isLast && <span className="ml-1 text-xs opacity-60"><kbd className="font-mono">{getMetaKeyLabel()}</kbd> <kbd className="font-mono bg-vscButtonBackground/10 px-1">G</kbd></span>}
           </HeaderButtonWithText>
         )}
       </div>

@@ -129,7 +129,7 @@ export class VsCodeExtension {
     resolveWebviewProtocol(this.sidebar.webviewProtocol);
 
     // Config Handler with output channel
-    const outputChannel = vscode.window.createOutputChannel("PearAI");
+    const outputChannel = vscode.window.createOutputChannel("ascende.ai");
     const inProcessMessenger = new InProcessMessenger<
       ToCoreProtocol,
       FromCoreProtocol
@@ -177,7 +177,7 @@ export class VsCodeExtension {
           if (uri.authority === "pearai.pearai") {
             if (uri.path === "/ping") {
               vscode.window.showInformationMessage(
-                "PearAI received a custom URI!",
+                "ascende.ai received a custom URI!",
               );
             } else if (uri.path === "/auth") {
               const queryParams = new URLSearchParams(uri.query);

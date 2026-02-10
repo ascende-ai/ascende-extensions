@@ -105,7 +105,7 @@ export class ContinueGUIWebviewViewProvider
     private readonly windowId: string,
     private readonly extensionContext: vscode.ExtensionContext,
   ) {
-    this.outputChannel = vscode.window.createOutputChannel("PearAI");
+    this.outputChannel = vscode.window.createOutputChannel("ascende.ai");
     this.enableDebugLogs = false;
     this.updateDebugLogsStatus();
     this.setupDebugLogsListener();
@@ -189,7 +189,7 @@ export class ContinueGUIWebviewViewProvider
         </script>
         <link href="${styleMainUri}" rel="stylesheet">
 
-        <title>PearAI</title>
+        <title>ascende.ai</title>
       </head>
       <body>
         <div id="root"></div>

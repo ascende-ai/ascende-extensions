@@ -15,7 +15,7 @@ const StatusViewLayout = ({ children }: StatusViewProps) => (
     <div className="w-full text-center flex flex-col items-center justify-center relative gap-5">
       <img
         src={getLogoPath("pearai-memory-splash.svg")}
-        alt="PearAI Memory Splash"
+        alt="ascende.ai Memory Splash"
       />
       {children}
     </div>
@@ -38,13 +38,13 @@ export const DisabledView = ({ hasUnsavedChanges }: { hasUnsavedChanges: boolean
   return (
     <StatusViewLayout>
       <ContentWrapper>
-        <div className="text-2xl font-['SF Pro']">PearAI Memory Disabled</div>
+        <div className="text-2xl font-['SF Pro']">ascende.ai Memory Disabled</div>
         <div className="opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
           {hasUnsavedChanges ? (
             "You have unsaved changes to memories"
           ) : (
             <>
-              PearAI Memory is disabled.
+              ascende.ai Memory is disabled.
               <br />
               You can enable it in{" "}
               <span
@@ -91,17 +91,17 @@ export const EmptyView = ({ onAddMemory }: { onAddMemory: () => void }) => (
       <div className="flex-1 flex absolute bottom-[260px] items-center justify-center">
         <img
           src={getLogoPath("pearai-memory-splash.svg")}
-          alt="PearAI Search Splash"
+          alt="ascende.ai Search Splash"
         />
       </div>
 
       <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">
         <div className="flex flex-col text-left">
-          <div className="text-2xl font-['SF Pro']">PearAI Memory</div>
+          <div className="text-2xl font-['SF Pro']">ascende.ai Memory</div>
           <div className="h-[18px] opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">Local Memory Storage</div>
         </div>
         <div className="w-[300px] h-[140px] overflow-hidden text-left opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
-          PearAI Memory allows you to add information for PearAI to remember. Add memories to personalize your building experience!
+          ascende.ai Memory allows you to add information for ascende.ai to remember. Add memories to personalize your building experience!
         </div>
         <div className="w-[300px] h-[100px] overflow-hidden text-left opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
           No memories yet – Click the button below to add memories.

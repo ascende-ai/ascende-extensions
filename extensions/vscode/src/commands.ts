@@ -448,7 +448,7 @@ const commandsMap: (
       extensionContext.globalState.update(FIRST_LAUNCH_KEY, false);
       vscode.window
         .showInformationMessage(
-          "Successfully reset PearAI first launch flag, RELOAD WINDOW TO SEE WELCOME PAGE",
+          "Successfully reset ascende.ai first launch flag, RELOAD WINDOW TO SEE WELCOME PAGE",
           "Reload Window",
         )
         .then((selection) => {
@@ -735,7 +735,7 @@ const commandsMap: (
       //create the full screen panel
       let panel = vscode.window.createWebviewPanel(
         "pearai.chatViewFullscreen",
-        "PearAI",
+        "ascende.ai",
         vscode.ViewColumn.One,
         {
           retainContextWhenHidden: true,
@@ -986,7 +986,7 @@ const commandsMap: (
       });
       vscode.commands.executeCommand("pearai-roo-cline.pearaiLogout");
       sidebar.webviewProtocol?.request("pearAISignedOut", undefined);
-      vscode.window.showInformationMessage("PearAI: Successfully logged out!");
+      vscode.window.showInformationMessage("ascende.ai: Successfully logged out!");
     },
     "pearai.updateUserAuth": async (data: {
       accessToken: string;
@@ -996,7 +996,7 @@ const commandsMap: (
       // Ensure that refreshToken and accessToken are both present
       if (!data || !(data.refreshToken && data.accessToken)) {
         vscode.window.showWarningMessage(
-          "PearAI: Failed to parse user auth request!",
+          "ascende.ai: Failed to parse user auth request!",
         );
         return;
       }
@@ -1010,7 +1010,7 @@ const commandsMap: (
       if (data.fromLogin) {
         sidebar.webviewProtocol?.request("pearAISignedIn", undefined);
         vscode.commands.executeCommand("pearai-roo-cline.pearaiLogin", data);
-        vscode.window.showInformationMessage("PearAI: Successfully logged in!");
+        vscode.window.showInformationMessage("ascende.ai: Successfully logged in!");
       }
     },
     // "pearai.manualLogin": async () => {
@@ -1066,7 +1066,7 @@ const commandsMap: (
       if (!warnMsg && flagSet) {
         // credit restored
         vscode.window.showInformationMessage(
-          "Credit restored. Switched back to PearAI Pro model.",
+          "Credit restored. Switched back to ascende.ai Pro model.",
         );
         extensionContext.globalState.update("freeModelSwitched", false);
         return;
@@ -1077,7 +1077,7 @@ const commandsMap: (
         extensionContext.globalState.update("freeModelSwitched", true);
         sidebar.webviewProtocol?.request(
           "switchModel",
-          "PearAI Model (Recommended)",
+          "ascende.ai Model (Recommended)",
           ["pearai.chatView"],
         );
       }
