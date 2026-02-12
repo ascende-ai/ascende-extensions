@@ -24,7 +24,7 @@ export const features = [
     id: "agent",
     icon: "inventory-creator.svg",
     title: "Code automatically with ascende.ai Agent",
-    description: "Autonomous coding agent, powered by Roo Code / Cline",
+    description: "Autonomous coding agent",
     video: getAssetPath("pearai-agent-welcome.mp4"),
   },
   {

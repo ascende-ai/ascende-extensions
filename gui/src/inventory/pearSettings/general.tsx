@@ -315,7 +315,7 @@ const AccountSettings = () => {
         </div>
         <div className="flex flex-col w-full justify-center gap-3">
           <div className="opacity-50 text-xs font-normal font-['SF Pro']">
-            PEARAI AGENT SETTINGS
+            Ascende.ai AgentSETTINGS
           </div>
           <div
             className="flex-1 p-3 bg-list-hoverBackground cursor-pointer rounded-lg border border-solid justify-between items-center flex self-stretch no-underline text-inherit hover:text-inherit"

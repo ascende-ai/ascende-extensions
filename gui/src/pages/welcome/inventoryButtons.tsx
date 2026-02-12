@@ -17,42 +17,43 @@ const menuItems = [
         boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
         textMargin: "mb-[2.7px]"
     },
-    {
-        id: "chat",
-        name: "Chat",
-        icon: "chat-no-bg.svg",
-        tooltip: "Chat",
-        bgGradient: "bg-gradient-to-b from-[#aff349] to-[#1b9300]",
-        textColor: "#e8ffc7",
-        glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(175,243,73,1.00)]",
-        expandedWidth: "w-[65px]",
-        boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
-        textMargin: "mb-[2.5px]"
-    },
-    {
-        id: "search",
-        name: "Search",
-        icon: "search-no-bg.svg",
-        tooltip: "Search",
-        backgroundColor: "bg-gradient-to-b from-[#12d3cd] to-[#008872]",
-        textColor: "#c1fff2",
-        glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(20,210,203,1.00)] ",
-        expandedWidth: "w-[78px]",
-        boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
-        textMargin: "mb-[2.5px]"
-    },
-    {
-        id: "memory",
-        name: "Memory",
-        icon: "mem0-no-bg.svg",
-        tooltip: "Memory",
-        backgroundColor: "bg-gradient-to-b from-[#9069fe] to-[#582bd3]",
-        textColor: "#e0d5ff",
-        glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(142,102,252,1.00)]",
-        expandedWidth: "w-[88px]",
-        boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
-        textMargin: "mb-[2.6px]"
-    }
+    // Hidden: Chat, Search, and Memory buttons
+    // {
+    //     id: "chat",
+    //     name: "Chat",
+    //     icon: "chat-no-bg.svg",
+    //     tooltip: "Chat",
+    //     bgGradient: "bg-gradient-to-b from-[#aff349] to-[#1b9300]",
+    //     textColor: "#e8ffc7",
+    //     glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(175,243,73,1.00)]",
+    //     expandedWidth: "w-[65px]",
+    //     boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
+    //     textMargin: "mb-[2.5px]"
+    // },
+    // {
+    //     id: "search",
+    //     name: "Search",
+    //     icon: "search-no-bg.svg",
+    //     tooltip: "Search",
+    //     backgroundColor: "bg-gradient-to-b from-[#12d3cd] to-[#008872]",
+    //     textColor: "#c1fff2",
+    //     glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(20,210,203,1.00)] ",
+    //     expandedWidth: "w-[78px]",
+    //     boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
+    //     textMargin: "mb-[2.5px]"
+    // },
+    // {
+    //     id: "memory",
+    //     name: "Memory",
+    //     icon: "mem0-no-bg.svg",
+    //     tooltip: "Memory",
+    //     backgroundColor: "bg-gradient-to-b from-[#9069fe] to-[#582bd3]",
+    //     textColor: "#e0d5ff",
+    //     glow: "shadow-[0px_0px_57.60000228881836px_9.600000381469727px_rgba(142,102,252,1.00)]",
+    //     expandedWidth: "w-[88px]",
+    //     boxShadow: "shadow-[inset_0px_0px_0px_1.2px_#FFFFFF80]",
+    //     textMargin: "mb-[2.6px]"
+    // }
 ];
 
 const InventoryButtons = ({ activeItemID = "agent" }: { activeItemID?: string }) => {
@@ -79,7 +80,7 @@ const InventoryButtons = ({ activeItemID = "agent" }: { activeItemID?: string })
                             <div
                                 key={`${item.tooltip}-${index}`}
                                 className={` h-7
-                                    ${item.backgroundColor || item.bgGradient} 
+                                    ${item.backgroundColor} 
                                     ${activeItemID === item.id ? item.glow : ""} 
                                     ${activeItemID !== item.id ? "z-10" : "z-5"} 
                                     rounded-[10px] flex items-center

@@ -301,7 +301,6 @@ export default function AIToolInventory() {
         <span>Iterative feedback loop for better results</span>,
         <span>Maintains safety through permission-based access</span>
       ],
-      poweredBy: "Roo Code / Cline",
       enabled: true,
       comingSoon: false,
       installNeeded: false,
